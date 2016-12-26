@@ -21,7 +21,6 @@ public class MyPageUpFormAction implements RaceAction{
 		
 		HttpSession session = request.getSession();
 		RaceMemberVo raceMember = (RaceMemberVo) session.getAttribute("loginUser");
-		
 		 request.setAttribute("upList", raceMember);
 		 
 		 
