@@ -11,6 +11,17 @@
       document.frm.action = "searchQna.do";
       document.frm.submit();
    }
+	function go_view(qseq) {
+		var theForm = document.frm;
+		theForm.qseq.value = qseq;
+		theForm.action = "memberQnaDetail.do";
+		theForm.submit();
+	}
+	 function go_search() {
+	      document.frm.action = "searchQna.do";
+	      document.frm.submit();
+	   }
+
 </script>
 <style>
 #mains {
@@ -44,46 +55,44 @@ border:none;
 }
 </style>
 </head>
-<body>
-   <div id="mains" style="margin-top: 130px;">
-      <h1>Q & A</h1>
-      <form name="frm" method="post">
-         <table style="float: right;">
+<article>
+      <h1>QnA리스트</h1>
+      <form name="frm" method="post" id="mains">
+       <table style="float: right;">
             <tr>
                <td id="tdid"><b>제 목 : </b><input type="text" name="key"> <input
                   class="btn btn-default" type="button" value="검색" onclick="go_search()">
                </td>
                <td id="tdid">
-               	<a href="qnaWirteForm.do" class="btn btn-default" role="button">글쓰기</a>
+                  <a href="qnaWirteForm.do" class="btn btn-default" role="button">글쓰기</a>
                </td>
             </tr>
          </table>
-         <br>
+      <input type="hidden" name="qseq">
          <table id="orderList">
             <tr>
-               <th>번 호</th>
-               <th>제 목</th>
-               <th>I D</th>
-               <th>등 록 일</th>
-               <th>답변여부</th>
+               <th>기본키(답변여부)</th>
+               <th>질문내용</th>
+               <th>답변내용</th>
+               <th>제목</th>
+               <th>작성자아이디</th>
+               <th>질문날짜</th>
             </tr>
-            <c:forEach items="${listQna}" var="raceQnaVo">
+            <c:forEach items="${listQna}" var="QnaVo">
                <tr>
-                  <td>${raceQnaVo.qna_qseq}</td>
-                  <td>${raceQnaVo.qna_content}</td>
-                  <td>${raceQnaVo.qna_id}</td>
-                  <td>${raceQnaVo.qna_date}</td>
-                  <td>
-                  <c:choose>
-                  <c:when test='${raceQnaVo.qna_rep=="n"}'>(미처리)</c:when>
-                     <c:otherwise>(답변처리완료)</c:otherwise>
-                  </c:choose>
-                  </td>
-                  
+                 <td>${QnaVo.qna_qseq} <c:choose>
+							<c:when test='${QnaVo.qna_rep=="n"}'>(미처리)</c:when>
+							<c:otherwise>(답변처리완료)</c:otherwise>
+						</c:choose>
+				  </td>
+                  <td>${QnaVo.qna_content}</td>
+                  <td>${QnaVo.qna_reply}</td>
+                  <td><a href="#" onClick="javascript:go_view('${QnaVo.qna_qseq}')">	${QnaVo.qna_title} </a></td>
+                  <td>${QnaVo.qna_id}</td>
+                  <td>${QnaVo.qna_date}</td>
                </tr>
             </c:forEach>
          </table>
       </form>
-   </div>
-</body>
+</article>
 </html>

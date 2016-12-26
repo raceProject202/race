@@ -35,6 +35,7 @@ public class JoinAction implements RaceAction {
 		raceMemberVo.setMem_email(request.getParameter("email"));
 		raceMemberVo.setMem_hp(request.getParameter("phone"));
 		raceMemberVo.setMem_zip(request.getParameter("zipcode"));
+		
 		RaceMemberServiceImpl raceMemberService = RaceMemberServiceImpl.getInstance();
 		/*RaceDao raceDao = RaceMemberDaoImpl.getInstance();*/
 		try {

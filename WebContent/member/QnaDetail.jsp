@@ -7,7 +7,7 @@
 <script type="text/javascript">
 	function go_list() {
 		var theForm = document.frm;
-		theForm.action = "QnaStart.do";
+		theForm.action = "QnaListBack.do";
 		theForm.submit();
 	}
 
@@ -19,6 +19,7 @@
 	}
 </script>
 <article>
+<br><br><br><br><br>
 	<h1>QnA 게시판</h1>
 	<form name="frm" method="post">
 		<input type="hidden" name="qseq">
@@ -40,13 +41,8 @@
 			<c:when test='${QnaVo.qna_rep=="n"}'>
 				<table id="orderList">
 					<tr>
-						<td colspan="2"><img src="admin/images/opinionimg01.gif">
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2"><textarea name="reply" rows="3" cols="50"></textarea>
-							<input type="button" class="btn" value="저장"
-							onClick="go_rep('${QnaVo.qna_qseq}')"></td>
+						<th>댓글</th>
+						<td>${QnaVo.qna_reply}</td>
 					</tr>
 				</table>
 				<br>
@@ -54,13 +50,8 @@
 			<c:otherwise>
 				<table id="orderList">
 					<tr>
-						<td colspan="2"><img src="admin/images/opinionimg01.gif">
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2"><textarea name="reply" rows="3" cols="50"></textarea>
-							<input type="button" class="btn" value="저장"
-							onClick="go_rep('${QnaVo.qna_qseq}')"></td>
+						<th>댓글</th>
+						<td>${QnaVo.qna_reply}</td>
 					</tr>
 				</table>
 			</c:otherwise>

@@ -17,7 +17,7 @@ public class LoginAction implements RaceAction{
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		String url = "/main.do";
+		String url = "/index.jsp";
 		
 		HttpSession session = request.getSession();
 		String id = request.getParameter("id");
