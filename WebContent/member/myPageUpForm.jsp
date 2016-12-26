@@ -84,7 +84,7 @@
 				<label class="col-md-4 control-label" for="add1">Address 1</label>
 				<div class="col-md-3">
 					<input id="add1" name="add1" type="text" placeholder="주소"
-						class="form-control input-md" value=${upList.mem_add1 }>
+						class="form-control input-md" value="${upList.mem_add1 }">
 
 				</div>
 			</div>
