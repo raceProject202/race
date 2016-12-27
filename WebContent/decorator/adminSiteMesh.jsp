@@ -49,7 +49,7 @@
     <div class="navbar-header">
     </div>
        <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> LOGOUT</a></li>
+        <li><a href="adminLoginForm.do"><span class="glyphicon glyphicon-log-in"></span> LOGOUT</a></li>
       </ul>
   </div>
  </nav>
@@ -62,7 +62,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.jsp">RACE</a>
+				<a class="navbar-brand" href="ProdStart.do">RACE</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class = "di">

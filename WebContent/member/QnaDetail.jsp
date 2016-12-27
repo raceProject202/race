@@ -18,11 +18,53 @@
 		theForm.submit();
 	}
 </script>
+<style>
+table {
+color: #333;
+font-family: Helvetica, Arial, sans-serif;
+width: 640px;
+border-collapse:
+collapse; border-spacing: 0;
+margin : 0% 50% 0% 30%;
+}
+
+td, th {
+border: 1px solid transparent; /* No more visible border */
+height: 30px;
+
+}
+
+th {
+background: #DFDFDF; /* Darken header a bit */
+font-weight: bold;
+}
+
+td {
+background: #FAFAFA;
+text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */
+tr:nth-child(even) td { background: #F1F1F1; }
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells) */
+tr:nth-child(odd) td { background: #FEFEFE; }
+
+
+
+#btn{
+margin :  2% 50% 0% 60%;
+}
+
+h1{
+margin :  0% 50% 3% 30%;
+}
+</style>
 <article>
 <br><br><br><br><br>
-	<h1>QnA 게시판</h1>
 	<form name="frm" method="post">
 		<input type="hidden" name="qseq">
+	<h1>QnA 게시판</h1>
 		<table id="orderList">
 			<tr>
 				<th width="20%">제목</th>
@@ -50,13 +92,13 @@
 			<c:otherwise>
 				<table id="orderList">
 					<tr>
-						<th>댓글</th>
+						<th width="20%">댓글</th>
 						<td>${QnaVo.qna_reply}</td>
 					</tr>
 				</table>
 			</c:otherwise>
 		</c:choose>
-		<input type="button" class="btn" value="목록" onClick="go_list()">
+		<input type="button" class="btn" id="btn" value="목록" onClick="go_list()">
 	</form>
 </article>
 <%-- <%@ include file="/admin/footer.jsp"%> --%>
