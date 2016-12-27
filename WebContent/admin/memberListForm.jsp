@@ -70,7 +70,7 @@ td, th {
                <tr>
                   <td>${memberVO.mem_id}</td>
                   <td>
-                  	<a href="#" onClick="javascript:go_view('${memberVO.mem_id}')">${memberVO.mem_name} aaaaaaa</a>
+                  	<a href="#" onClick="javascript:go_view('${memberVO.mem_id}')">${memberVO.mem_name}</a>
 				  </td>
                   <td>${memberVO.mem_email}</td>
                   <td>${memberVO.mem_add1}</td>

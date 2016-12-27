@@ -151,7 +151,7 @@ input:focus::-webkit-input-placeholder {
                   class="icon-bar"></span> <span class="icon-bar"></span> <span>
                   class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.jsp">RACE</a>
+            <a class="navbar-brand" href="main.do">RACE</a>
          </div>
          
          <!-- Collect the nav links, forms, and other content for toggling -->

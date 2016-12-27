@@ -44,8 +44,8 @@ td, th {
 	}
 </script>
 <article>
-      <h1>QnA리스트</h1>
       <form name="frm" method="post" id="mains">
+      <h1>QnA리스트</h1>
       <input type="hidden" name="qseq">
          <table id="orderList">
             <tr>
