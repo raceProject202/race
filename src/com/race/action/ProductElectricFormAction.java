@@ -11,6 +11,7 @@ public class ProductElectricFormAction implements RaceAction{
 	@Override
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		
 		String url = "/product/electric.jsp";
 		return url;
 	}
