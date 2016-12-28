@@ -49,6 +49,12 @@ nav#aaaa a:hover{
 	text-align: center;
 	height: 50%;
 }
+#race2{
+ 	width:95%;
+	height:85px; 
+	margin-left:100px;
+}
+
 </style>
 <decorator:head />
 </head>
@@ -58,8 +64,8 @@ nav#aaaa a:hover{
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <nav class="navlogo" id = "aaaa">
          <div class="container-fluid">
+             <a class="navbar-brand" href="main.do"><img id="race2" src="img/race.jpg"></a>
             <div class="navbar-header"></div>
-             
               <ul class="nav navbar-nav navbar-right">
                <li><a href="qnaListForm.do">Q & A</a></li>
             </ul>
@@ -113,7 +119,7 @@ nav#aaaa a:hover{
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="main.do">RACE</a>
+			
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="di">
