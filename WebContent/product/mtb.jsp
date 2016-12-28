@@ -72,10 +72,10 @@
                         <div class="thumbnail">
                             <img src="img/mtb/mtb1-1.PNG" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$24.99</h4>
-                                <h4><a href="productMtbDetail1.do">MTB1</a>
+                                <h4 class="pull-right">￦ 5200000</h4>
+                                <h4><a href="productMtbDetail1.do">첼로 안텔로프 XX1</a>
                                 </h4>
-                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                                <p>비싸...</a>.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">15 reviews</p>
@@ -94,8 +94,8 @@
                         <div class="thumbnail">
                             <img src="img/mtb/mtb2-1.PNG" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$64.99</h4>
-                                <h4><a href="productMtbDetail2.do">MTB2</a>
+                                <h4 class="pull-right">￦ 4200000</h4>
+                                <h4><a href="productMtbDetail2.do">첼로 안텔로프 80</a>
                                 </h4>
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
@@ -116,8 +116,8 @@
                         <div class="thumbnail">
                             <img src="img/mtb/mtb3-1.PNG" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$74.99</h4>
-                                <h4><a href="productMtbDetail3.do">MTB3</a>
+                                <h4 class="pull-right">￦ 4000000</h4>
+                                <h4><a href="productMtbDetail3.do">첼로 XC 90</a>
                                 </h4>
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
@@ -138,8 +138,8 @@
                         <div class="thumbnail">
                             <img src="img/mtb/mtb4-1.PNG" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$84.99</h4>
-                                <h4><a href="productMtbDetail4.do">MTB4</a>
+                                <h4 class="pull-right">￦ 6000000</h4>
+                                <h4><a href="productMtbDetail4.do">첼로 크로노 90</a>
                                 </h4>
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>

@@ -8,6 +8,8 @@ public class RaceCartProdDto {
 	private int cart_qty;		//상품수량
 	private String cart_date;	//상품날짜
 	private String cart_ok;		//상품duqn
+	private int cart_go;		// 0:주문신청, 1:배송, -1:환불
+	private String cart_last;	// 배송완료
 	
 	private int prod_id;       //상품 아이디
 	private String prod_name;  //상품 이름
@@ -30,6 +32,8 @@ public class RaceCartProdDto {
 		this.cart_qty = cartVo.getCart_qty();
 		this.cart_date = cartVo.getCart_date();
 		this.cart_ok = cartVo.getCart_ok();
+		this.cart_go = cartVo.getCart_go();
+		this.cart_last = cartVo.getCart_last();
 		this.prod_id = prodVo.getProd_id();
 		this.prod_name = prodVo.getProd_name();
 		this.prod_cn = prodVo.getProd_cn();
@@ -112,6 +116,30 @@ public class RaceCartProdDto {
 
 	public void setCart_ok(String cart_ok) {
 		this.cart_ok = cart_ok;
+	}
+
+
+
+	public int getCart_go() {
+		return cart_go;
+	}
+
+
+
+	public void setCart_go(int cart_go) {
+		this.cart_go = cart_go;
+	}
+
+
+
+	public String getCart_last() {
+		return cart_last;
+	}
+
+
+
+	public void setCart_last(String cart_last) {
+		this.cart_last = cart_last;
 	}
 
 
@@ -238,9 +266,10 @@ public class RaceCartProdDto {
 
 	@Override
 	public String toString() {
-		return "RaceCartDto [cart_no=" + cart_no + ", cart_prod=" + cart_prod
-				+ ", cart_member=" + cart_member + ", cart_qty=" + cart_qty
-				+ ", cart_date=" + cart_date + ", cart_ok=" + cart_ok
+		return "RaceCartProdDto [cart_no=" + cart_no + ", cart_prod="
+				+ cart_prod + ", cart_member=" + cart_member + ", cart_qty="
+				+ cart_qty + ", cart_date=" + cart_date + ", cart_ok="
+				+ cart_ok + ", cart_go=" + cart_go + ", cart_last=" + cart_last
 				+ ", prod_id=" + prod_id + ", prod_name=" + prod_name
 				+ ", prod_cn=" + prod_cn + ", prod_cost=" + prod_cost
 				+ ", prod_price=" + prod_price + ", prod_qty=" + prod_qty
@@ -248,6 +277,8 @@ public class RaceCartProdDto {
 				+ ", prod_image2=" + prod_image2 + ", prod_lgu=" + prod_lgu
 				+ "]";
 	}
+
+
 
 
 

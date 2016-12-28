@@ -66,7 +66,7 @@
 
                 </div>
                 
-                <br/><br/>
+                
 
                 <div class="row">
 
@@ -74,10 +74,10 @@
                         <div class="thumbnail">
                             <img src="img/hybrid/hyb2.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$24.99</h4>
-                                <h4><a href="productMtbDetail1.do">4번째</a>
+                                <h4 class="pull-right">￦ 215000</h4>
+                                <h4><a href="productHybridDetail1.do">삼천리 22 제오</a>
                                 </h4>
-                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                                <p>간단한 상품 정보</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">15 reviews</p>
@@ -88,6 +88,15 @@
                                     <span class="glyphicon glyphicon-star"></span>
                                     <span class="glyphicon glyphicon-star"></span>
                                 </p>
+                                  <div id="buttons">
+            	<a class="btn icon-btn btn-success" href="/race/cartInsertAction.do?CART_PROD=1&CART_QTY=1">
+					<span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>
+				장바구니에 담기 </a>
+				<a class="btn icon-btn btn-info" href="#">
+				<span class="glyphicon btn-glyphicon glyphicon-share img-circle text-info"></span>
+				바로구매 </a>
+				
+			</div>
                             </div>
                         </div>
                     </div>
@@ -96,10 +105,10 @@
                         <div class="thumbnail">
                             <img src="img/hybrid/hyb1.PNG" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$64.99</h4>
-                                <h4><a href="productMtbDetail2.do">22222</a>
+                                <h4 class="pull-right">￦ 345000</h4>
+                                <h4><a href="productHybridDetail2.do">삼천리 저스틴7</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>정보정보정보.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">12 reviews</p>
@@ -110,6 +119,15 @@
                                     <span class="glyphicon glyphicon-star"></span>
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 </p>
+                                <div id="buttons">
+            	<a class="btn icon-btn btn-success" href="/race/cartInsertAction.do?CART_PROD=2&CART_QTY=1">
+					<span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>
+				장바구니에 담기 </a>
+				<a class="btn icon-btn btn-info" href="#">
+				<span class="glyphicon btn-glyphicon glyphicon-share img-circle text-info"></span>
+				바로구매 </a>
+				
+			</div>
                             </div>
                         </div>
                     </div>
@@ -118,10 +136,10 @@
                         <div class="thumbnail">
                             <img src="img/hybrid/5.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$74.99</h4>
-                                <h4><a href="productMtbDetail3.do">55555</a>
+                                <h4 class="pull-right">￦ 225000</h4>
+                                <h4><a href="productHybridDetail3.do">삼천리 러쉬하이</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>러쉬러쉬러쉬</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">31 reviews</p>
@@ -132,6 +150,17 @@
                                     <span class="glyphicon glyphicon-star"></span>
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 </p>
+                                <div id="buttons">
+            	<a class="btn icon-btn btn-success" href="/race/cartInsertAction.do?CART_PROD=3&CART_QTY=1">
+					<span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>
+				장바구니에 담기 </a>
+				<a class="btn icon-btn btn-info" href="#">
+				<span class="glyphicon btn-glyphicon glyphicon-share img-circle text-info"></span>
+				바로구매 </a>
+				
+			</div>
+				
+			</div>
                             </div>
                         </div>
                     </div>
@@ -140,10 +169,10 @@
                         <div class="thumbnail">
                             <img src="img/hybrid/4.PNG" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$84.99</h4>
-                                <h4><a href="productMtbDetail4.do">11111</a>
+                                <h4 class="pull-right">￦ 410000</h4>
+                                <h4><a href="productHybridDetail4.do">삼천리 저스틴21</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>저스틴 비버 예~</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">6 reviews</p>
@@ -154,6 +183,15 @@
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 </p>
+                                <div id="buttons">
+            	<a class="btn icon-btn btn-success" href="/race/cartInsertAction.do?CART_PROD=4&CART_QTY=1">
+					<span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>
+				장바구니에 담기 </a>
+				<a class="btn icon-btn btn-info" href="#">
+				<span class="glyphicon btn-glyphicon glyphicon-share img-circle text-info"></span>
+				바로구매 </a>
+				
+			</div>
                             </div>
                         </div>
                     </div>
@@ -162,10 +200,10 @@
                         <div class="thumbnail">
                             <img src="img/hybrid/3.PNG" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$94.99</h4>
-                                <h4><a href="productMtbDetail5.do">3333333</a>
+                                <h4 class="pull-right">￦ 420000</h4>
+                                <h4><a href="productHybridDetail5.do">삼천리 모멘텀</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>모모모모모</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">18 reviews</p>
@@ -176,6 +214,15 @@
                                     <span class="glyphicon glyphicon-star"></span>
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 </p>
+                                <div id="buttons">
+            	<a class="btn icon-btn btn-success" href="/race/cartInsertAction.do?CART_PROD=5&CART_QTY=1">
+					<span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>
+				장바구니에 담기 </a>
+				<a class="btn icon-btn btn-info" href="#">
+				<span class="glyphicon btn-glyphicon glyphicon-share img-circle text-info"></span>
+				바로구매 </a>
+				
+			</div>
                             </div>
                         </div>
                     </div>
@@ -184,17 +231,17 @@
                         <div class="thumbnail">
                             <img src="img/junbi.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$184.99</h4>
-                                <h4><a href="#">6번째</a>
+                                <h4 class="pull-right">￦ 99999999</h4>
+                                <h4><a href="#">준비중</a>
                                 </h4>
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">19 reviews</p>
                                 <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 </p>

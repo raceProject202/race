@@ -6,7 +6,7 @@
 <style type="text/css">
 
 #popup {
-   background-color: #EDEDED;
+   background-color: #121212;
    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
    -moz-opacity: 1;
    -khtml-opacity: 1;
@@ -18,9 +18,9 @@
    z-index: 1;
 }
 
-#popup>div {
+/* #popup>div {
    position:relative;
-}
+} */
 
  h1 {
    margin-left:20px;
@@ -31,24 +31,52 @@ p {
    text-align: center;
 }
 #left{
-	margin-left:180px;
-	margin-top:30px;
+	margin-left:20px;
+	color:#FFFFFF;
+	margin-top:5px;
+	
 }
 #popHeader{
 	background-color: #FF0000;
 } 
 #popupImg{
 	margin-left:20px;
+	
+}
+#popupRace{
+	margin-top:5px;
+	margin-left:10px;
+}
+#pp{
+	padding:5px;
+	color:#FFFFFF;
+}
+#popupFont{
+	color:#FFFFFF;
+}
+#popupFont2{
+	color:#FFFFFF;
+	padding-left:50px;
+	padding-top:100px;
+}
+#popupImg2{
+	margin-left:140px;
+}
+#btn{
+	color:#000000;
 }
 </style>
 
 <div id="popup">
-      <h1>Race</h1>
-      <p>어서오세요&nbsp;Race&nbsp;홈페이지 입니다.<p>
-	<div id="popupImg">
-      <img src="img/electric/popup.png" alt="">
-      <a href="productElectric.do">alton</a>
- </div>
+      <img id="popupRace"src="img/popupRace.jpg">
+      <p id = "pp"><b>어서오세요&nbsp;Race&nbsp;홈페이지 입니다.<br>New Item 입니다. 구경하고 가세요!</b></p>
+	 <div id="popupImg">
+      <a href="productElectric.do" id="popupFont"><img src="img/popup.png" alt=""></a>
+      <div id="popupImg2">
+      <a href="productElectric.do" id="popupFont2"><img src="img/popup2.png" alt=""></a>
+     </div>
+  </div>
+ 
    <div id = "left">
       <form name="form" method="get" action="<%=request.getContextPath()%>/popup.do" >
       <input type="checkbox" id="check" name="one_day" value="check" />
