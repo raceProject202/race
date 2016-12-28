@@ -37,12 +37,14 @@ p {
 #popHeader{
 	background-color: #FF0000;
 } 
+#popupImg{
+	margin-left:20px;
+}
 </style>
 
 <div id="popup">
       <h1>Race</h1>
       <p>어서오세요&nbsp;Race&nbsp;홈페이지 입니다.<p>
-      <br><br><br><br><br><br>
 	<div id="popupImg">
       <img src="img/electric/popup.png" alt="">
       <a href="productElectric.do">alton</a>
