@@ -37,7 +37,7 @@
 				<div class="carousel-caption">
 				</div>
 			</div>
-			<div class="item">j
+			<div class="item">
 				<div class="fill" style="background-image: url('img/fixi/carMain.jpg');"></div>
 				<div class="carousel-caption">
 				</div>

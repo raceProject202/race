@@ -129,6 +129,12 @@ input:focus::-webkit-input-placeholder {
   font-size:22px;
 }
 </style>
+<script type="text/javascript">
+   function main_go() {
+      location.href="<%=request.getContextPath()%>/main.do";
+   }
+	
+</script>
 <meta charset="UTF-8">
 <title></title>
 </head>
@@ -151,7 +157,7 @@ input:focus::-webkit-input-placeholder {
                   class="icon-bar"></span> <span class="icon-bar"></span> <span>
                   class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="main.do">RACE</a>
+            <a class="navbar-brand" href="#" onclick="main_go();">RACE</a>
          </div>
          
          <!-- Collect the nav links, forms, and other content for toggling -->
