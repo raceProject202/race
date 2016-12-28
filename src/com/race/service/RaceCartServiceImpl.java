@@ -1,10 +1,10 @@
 package com.race.service;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.race.dao.RaceCartDaoImpl;
-import com.race.dao.RaceMemberDaoImpl;
 import com.race.dto.RaceCartVo;
 
 public class RaceCartServiceImpl implements RaceService<RaceCartVo, Integer>{
@@ -27,6 +27,10 @@ public class RaceCartServiceImpl implements RaceService<RaceCartVo, Integer>{
 	@Override
 	public RaceCartVo selectVo(Integer key) throws SQLException {
 		return raceCartDaoImpl.selectVo(key);
+	}
+	
+	public ArrayList<RaceCartVo>listCart(String userId) throws SQLException {
+		return raceCartDaoImpl.listCart(userId);
 	}
 
 	@Override

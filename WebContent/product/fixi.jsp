@@ -72,8 +72,8 @@
                         <div class="thumbnail">
                             <img src="img/fixi/fix05.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$24.99</h4>
-                                <h4><a href="productFixiDetail1.do">fixi1</a>
+                                <h4 class="pull-right">￦ 122000</h4>
+                                <h4><a href="productFixiDetail1.do">벤데타 스키드</a>
                                 </h4>
                                 <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
                             </div>
@@ -94,8 +94,8 @@
                         <div class="thumbnail">
                             <img src="img/fixi/fix04.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$64.99</h4>
-                                <h4><a href="productFixiDetail2.do">fixi2</a>
+                                <h4 class="pull-right">￦ 310000</h4>
+                                <h4><a href="productFixiDetail2.do">알톤 로드마스터</a>
                                 </h4>
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
@@ -116,8 +116,8 @@
                         <div class="thumbnail">
                             <img src="img/fixi/fix03.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$74.99</h4>
-                                <h4><a href="productFixiDetail3.do">fixi3</a>
+                                <h4 class="pull-right">￦ 550000</h4>
+                                <h4><a href="productFixiDetail3.do">콘스탄틴 버나드</a>
                                 </h4>
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
@@ -138,8 +138,8 @@
                         <div class="thumbnail">
                             <img src="img/fixi/fix02.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$84.99</h4>
-                                <h4><a href="productFixiDetail4.do">fixi4</a>
+                                <h4 class="pull-right">￦ 440000</h4>
+                                <h4><a href="productFixiDetail4.do">벨로라인 미션</a>
                                 </h4>
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
@@ -160,8 +160,8 @@
                         <div class="thumbnail">
                             <img src="img/fixi/fix01_01.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$94.99</h4>
-                                <h4><a href="productFixiDetail5.do">fixi5</a>
+                                <h4 class="pull-right">￦ 7000000</h4>
+                                <h4><a href="productFixiDetail5.do">아르곤18</a>
                                 </h4>
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
