@@ -25,7 +25,7 @@
                 <p class="lead">My Page</p>
                 <div class="list-group">
                     <a href="myPageUpForm.do" class="list-group-item">회원 수정</a>
-                    <a href="#" class="list-group-item">주문 내역</a>
+                    <a href="CartListAction.do" class="list-group-item">주문 내역</a>
                 </div>
             </div>
           
