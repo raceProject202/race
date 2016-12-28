@@ -11,19 +11,22 @@ import javax.servlet.http.HttpServletResponse;
 import com.race.dto.RaceProdVo;
 import com.race.service.RaceProdServiceImpl;
 
-public class ProductHybridFormAction implements RaceAction{
+public class ProductFormAction implements RaceAction{
 
 	@Override
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		RaceProdServiceImpl raceProdService = RaceProdServiceImpl.getInstance();
 		
-		String url = "/member/hybrid.jsp";
+		String url = "/member/prodListForm.jsp";
 		
 		String lgu = request.getParameter("lgu");
+		
+		if(lgu == null){
+			lgu = (String) request.getAttribute("prod_lgu");
+		}
 		List<RaceProdVo> list = null;
 		
-		String prod_lgu = "1";
 		try {
 			list = raceProdService.selectAllLprod(Integer.parseInt(lgu));
 		} catch (SQLException e) {

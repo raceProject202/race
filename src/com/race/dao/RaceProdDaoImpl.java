@@ -33,6 +33,13 @@ public class RaceProdDaoImpl implements RaceDao<RaceProdVo, Integer> {
 		list = (ArrayList<RaceProdVo>)client.queryForList("selectAllProd");
 		return list;
 	}
+   
+   public List<RaceProdVo> selectAllLprod(int prod_lgu)
+			throws SQLException {
+		List<RaceProdVo> list = null;
+		list = (ArrayList<RaceProdVo>)client.queryForList("selectNameLprodProd",prod_lgu);
+		return list;
+	}
 
    public List<RaceProdVo> selectAllPage(int page, String prod_name)
 			throws SQLException {
@@ -83,7 +90,7 @@ public class RaceProdDaoImpl implements RaceDao<RaceProdVo, Integer> {
 
    public List<RaceProdVo> selectLprodAll( int prod_lgu) throws SQLException {
 	      List<RaceProdVo> list=null;
-	      list = (ArrayList<RaceProdVo>)client.queryForList("selectprodProd", prod_lgu);
+	      list = (ArrayList<RaceProdVo>)client.queryForList("selectNameLprodProd", prod_lgu);
 	      return list;
 	   }
 	   

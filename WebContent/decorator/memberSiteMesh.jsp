@@ -11,7 +11,32 @@
 <meta charset="UTF-8">
 <title></title>
 <!-- <link href="../css/bootstrap.css" rel="stylesheet"> -->
-
+<script type="text/javascript">
+	function productHybrid(lgu) {
+		var theForm = document.ff;
+		theForm.lgu.value = "1";
+		theForm.action = "productForm.do";
+		theForm.submit();
+	}
+	function go_rep(qseq) {
+		var theForm = document.ff;
+		theForm.lgu.value = "2";
+		theForm.action = "productMtb.do";
+		theForm.submit();
+	}
+	function go_rep(qseq) {
+		var theForm = document.ff;
+		theForm.lgu.value = "3";
+		theForm.action = "productFixi.do";
+		theForm.submit();
+	}
+	function go_rep(qseq) {
+		var theForm = document.ff;
+		theForm.lgu.value = "4";
+		theForm.action = "productElectric.do";
+		theForm.submit();
+	}
+</script>
 
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -53,7 +78,9 @@ nav#aaaa a:hover{
 <decorator:head />
 </head>
 <body>
-
+	<form name="ff" method="post">
+		<input type="hidden" name="lgu">
+	</form>
 	<!-- Navigation -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <nav class="navlogo" id = "aaaa">
@@ -120,8 +147,8 @@ nav#aaaa a:hover{
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="productHybrid.do">하이브리드</a></li>
-						<li><a href="productMtb.do">MTB</a></li>
+					<li><a href="#" onClick="productHybrid()">하이브리드</a></li>
+						<li><a href="productMtb.do" >MTB</a></li>
 						<li><a href="productFixi.do">픽시</a></li>
 						<li><a href="productElectric.do">전기바이크</a></li>
 				</ul>
