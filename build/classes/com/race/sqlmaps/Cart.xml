@@ -37,15 +37,21 @@ INSERT INTO CART
 	CART_PROD,
 	CART_MEMBER,
 	CART_QTY,
-	CART_DATE
+	CART_DATE,
+	cart_ok,
+	cart_go,
+	cart_last	
 )
 VALUES
 (
-	(SELECT NVL(MAX(CART_NO), 0) + 1 FROM CART),
+	cart_seq.naxtval,
 	#cart_prod#,
 	#cart_member#,
 	#cart_qty#,
-	SYSDATE
+	SYSDATE,
+	'n',
+	0,
+	'n'
 )
 	</insert>
 	
