@@ -15,7 +15,7 @@
 	</select>
 	
 	<!-- 상품 출력 -->
-	<select id="selectAllProd"  parameterClass="str" resultClass="prodVo">
+	<select id="selectAllProd"  resultClass="prodVo">
 		select * from prod order by prod_id desc
 	</select>
 
@@ -34,9 +34,9 @@
 		select * from prod where prod_name like '%$prod_name$%' order by prod_id desc
 	</select>
 	
-	<!-- 상품 이름으로 검색 -->
+	<!-- 상품 품번으로 검색 -->
 	<select id="selectNameLprodProd" resultClass="prodVo">
-		select * from prod where prod_lgu = #prod_lgu#
+		select * from prod where prod_lgu = #prod_lgu# order by prod_id desc
 	</select>
 	
 	<!-- 상품 등록 -->

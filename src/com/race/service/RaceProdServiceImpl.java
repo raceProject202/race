@@ -25,6 +25,12 @@ public class RaceProdServiceImpl implements RaceService<RaceProdVo, Integer>{
       return raceProdDaoImpl.selectAll();
    }
    
+   public List<RaceProdVo> selectAllLprod(int prod_lgu)throws SQLException {
+		List<RaceProdVo> list = null;
+		list = raceProdDaoImpl.selectLprodAll(prod_lgu);
+		return list;
+	}
+   
    public List<RaceProdVo> selectAllPage(int page, String prod_name) throws SQLException {
    
       return raceProdDaoImpl.selectAllPage(page, prod_name);
