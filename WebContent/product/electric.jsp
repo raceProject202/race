@@ -61,9 +61,7 @@
                         </div>
                     </div>
 
-                </div>
-                
-                <br/><br/>
+                </div>                
 
                 <div class="row">
 
@@ -71,8 +69,8 @@
                         <div class="thumbnail">
                             <img src="img/electric/filamain1.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$24.99</h4>
-                                <h4><a href="productElectricDetail1.do">fila</a>
+                                <h4 class="pull-right">￦ 1420000</h4>
+                                <h4><a href="productElectricDetail1.do">그라니티F</a>
                                 </h4>
                                 <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
                             </div>
@@ -93,8 +91,8 @@
                         <div class="thumbnail">
                             <img src="img/electric/xiomain.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$64.99</h4>
-                                <h4><a href="productElectricDetail2.do">xio</a>
+                                <h4 class="pull-right">￦ 540000</h4>
+                                <h4><a href="productElectricDetail2.do">샤오미 미치사이클</a>
                                 </h4>
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
@@ -115,8 +113,8 @@
                         <div class="thumbnail">
                             <img src="img/electric/altonmain2.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$74.99</h4>
-                                <h4><a href="productElectricDetail3.do">alton</a>
+                                <h4 class="pull-right">￦ 800000</h4>
+                                <h4><a href="productElectricDetail3.do">알톤 자이러트론</a>
                                 </h4>
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
@@ -137,8 +135,8 @@
                         <div class="thumbnail">
                             <img src="img/electric/honmain.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$84.99</h4>
-                                <h4><a href="productElectricDetail4.do">hon</a>
+                                <h4 class="pull-right">￦ 320000</h4>
+                                <h4><a href="productElectricDetail4.do">혼다 A7</a>
                                 </h4>
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
@@ -159,8 +157,8 @@
                         <div class="thumbnail">
                             <img src="img/electric/scgmain1.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$94.99</h4>
-                                <h4><a href="productElectricDetail5.do">scg</a>
+                                <h4 class="pull-right">￦ 8900000</h4>
+                                <h4><a href="productElectricDetail5.do">필라 이볼브 26xc</a>
                                 </h4>
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
@@ -181,8 +179,8 @@
                         <div class="thumbnail">
                             <img src="img/junbi.png" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$184.99</h4>
-                                <h4><a href="#">6번째</a>
+                                <h4 class="pull-right">￦ 99999999</h4>
+                                <h4><a href="#">준비중</a>
                                 </h4>
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>

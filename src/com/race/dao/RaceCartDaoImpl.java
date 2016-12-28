@@ -32,6 +32,12 @@ public class RaceCartDaoImpl implements RaceDao<RaceCartVo, Integer>{
 		return raceCartVo;
 	}
 
+	public ArrayList<RaceCartVo> listCart(String userId) throws SQLException {
+		ArrayList<RaceCartVo> cartList = new ArrayList<RaceCartVo>();
+		cartList = (ArrayList<RaceCartVo>) client.queryForList("listCart", userId);
+		return cartList;
+	}
+	
 	@Override
 	public void insert(RaceCartVo vo) throws SQLException {
 		client.update("insertCart", vo);

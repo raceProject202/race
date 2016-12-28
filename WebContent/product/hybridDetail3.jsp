@@ -55,7 +55,7 @@
 
             <div class="col-md-4">
                 <h3>Project Description</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+                <p>3번 ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
                 <h3>Project Details</h3>
                 <ul>
                     <li>Lorem Ipsum</li>
@@ -65,10 +65,9 @@
                 </ul>
             </div>
             <label> 가 격 : </label>
-				<p>${productVO.price2} 원</p>
-			<label> 수 량 : </label> <input type="text" name="quantity" size="2" value="1"><br><br>
+				<p>225000 원</p>
             <div id="buttons">
-            	<a class="btn icon-btn btn-success" href="#">
+            	<a class="btn icon-btn btn-success" href="/race/cartInsertAction.do?CART_PROD=3&CART_QTY=1">
 					<span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>
 				장바구니에 담기 </a>
 				<a class="btn icon-btn btn-info" href="#">

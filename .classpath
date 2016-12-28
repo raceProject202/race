@@ -13,7 +13,5 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="D:/util/ibatis2-common-2.1.7.597.jar"/>
-	<classpathentry kind="lib" path="D:/util/cos.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
