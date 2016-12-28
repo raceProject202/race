@@ -22,13 +22,38 @@
 	<!-- 회원 장바구니 전체 보기 -->
 	<select id="selectMemberCart" resultClass="cart">
 		select * from cart where cart_member=#cart_member#
+	</select>	
+	
+	<!-- 로그인 회원 장바구니 보기 -->
+	<select id="listCart" resultClass="cart">
+		select * from cart where cart_member=#cart_member#
 	</select>
 	
 	<!-- 장가구니 등록 -->
-	<update id="insertCart" parameterClass="cart">
-		insert into cart(cart_no,cart_prod,cart_member,cart_qty,cart_date,cart_ok)
-			values(#cart_no#,#cart_prod#,#cart_member#,#cart_qty#,sysdate,'n')
-	</update>
+	<insert id="insertCart" parameterClass="cart">
+INSERT INTO CART
+(
+	CART_NO,
+	CART_PROD,
+	CART_MEMBER,
+	CART_QTY,
+	CART_DATE,
+	cart_ok,
+	cart_go,
+	cart_last	
+)
+VALUES
+(
+	cart_seq.naxtval,
+	#cart_prod#,
+	#cart_member#,
+	#cart_qty#,
+	SYSDATE,
+	'n',
+	0,
+	'n'
+)
+	</insert>
 	
 	<!-- 장바구니 내용 수정 -->
 	<update id="updateCart" parameterClass="cart">

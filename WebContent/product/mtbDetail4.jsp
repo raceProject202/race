@@ -65,10 +65,9 @@
                 </ul>
             </div>
             <label> 가 격 : </label>
-				<p>${productVO.price2} 원</p>
-			<label> 수 량 : </label> <input type="text" name="quantity" size="2" value="1"><br><br>
+				<p>6000000 원</p>
             <div id="buttons">
-            	<a class="btn icon-btn btn-success" href="#">
+            	<a class="btn icon-btn btn-success" href="/race/cartInsertAction.do?CART_PROD=9&CART_QTY=1">
 					<span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>
 				장바구니에 담기 </a>
 				<a class="btn icon-btn btn-info" href="#">
