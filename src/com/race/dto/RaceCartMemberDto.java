@@ -1,6 +1,6 @@
 package com.race.dto;
 
-public class RaceCartDto {
+public class RaceCartMemberDto {
 
 	private int cart_no; 		//카트번호
 	private int cart_prod;		//상품코드
@@ -15,7 +15,8 @@ public class RaceCartDto {
 	private String cart_hp;    //맴버 전화번호
 	
 	
-	public RaceCartDto(RaceCartVo cartVo, RaceMemberVo memberVo) {
+	
+	public RaceCartMemberDto(RaceCartVo cartVo, RaceMemberVo memberVo) {
 		this.cart_no = cartVo.getCart_no();
 		this.cart_prod = cartVo.getCart_prod();
 		this.cart_member = cartVo.getCart_member();

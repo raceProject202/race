@@ -11,6 +11,7 @@ public class RaceProdVo {
 	private String prod_image1;//상품 이미지1
 	private String prod_image2;//상품 이미지2
 	private String prod_lgu;   //상품 등록코드
+	
 	public int getProd_id() {
 		return prod_id;
 	}
