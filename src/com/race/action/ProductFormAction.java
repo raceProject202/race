@@ -2,6 +2,7 @@ package com.race.action;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -26,17 +27,15 @@ public class ProductFormAction implements RaceAction{
 			lgu = (String) request.getAttribute("prod_lgu");
 		}
 		List<RaceProdVo> list = null;
-		
 		try {
 			list = raceProdService.selectAllLprod(Integer.parseInt(lgu));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		request.setAttribute("ProdList", list);
 		request.setAttribute("prod_lgu", lgu);
-		System.out.println(list);
+//		System.out.println(list);
 		
 		return url;
 	}

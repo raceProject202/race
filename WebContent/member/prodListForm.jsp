@@ -59,14 +59,14 @@
                                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                             </ol>
                             <div class="carousel-inner">
-                                <div class="item active">
-                                    <img class="slide-image" src="img/hybrid/hyb1.PNG" alt="">
+                            	<div class="item active">
+                                    <img class="slide-image" src="img/${ProdList.get(0).prod_image1 }" style="width: 800px; height:400px">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="img/hybrid/5.png" alt="">
+                                    <img class="slide-image" src="img/${ProdList.get(1).prod_image1 }" style="width: 800px; height:400px">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="img/hybrid/hyb2.png" alt="">
+                                    <img class="slide-image" src="img/${ProdList.get(2).prod_image1 }" style="width: 800px; height:400px">
                                 </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
