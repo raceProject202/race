@@ -26,6 +26,11 @@ public class RaceProdDaoImpl implements RaceDao<RaceProdVo, Integer> {
       this.client = client;
    }
    
+   public void read_count(RaceProdVo RaceProdVo) throws SQLException{
+	      client.update("readcountProd",RaceProdVo);
+	   }
+	   
+   
    @Override
    public List<RaceProdVo> selectAll()
 			throws SQLException {

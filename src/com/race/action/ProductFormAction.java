@@ -36,9 +36,12 @@ public class ProductFormAction implements RaceAction{
 		
 		request.setAttribute("ProdList", list);
 		request.setAttribute("prod_lgu", lgu);
+		System.out.println(lgu+"1231231231232131");
 		System.out.println(list);
 		
 		return url;
 	}
+	
+	
 	
 }

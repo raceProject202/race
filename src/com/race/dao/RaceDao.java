@@ -1,10 +1,9 @@
 package com.race.dao;
 
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.race.dto.RaceProdVo;
+import com.race.dto.RaceProdDto;
 
 public interface RaceDao<T,P> {
 	

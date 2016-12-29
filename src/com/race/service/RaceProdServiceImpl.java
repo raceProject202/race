@@ -19,6 +19,12 @@ public class RaceProdServiceImpl implements RaceService<RaceProdVo, Integer>{
       return instance;
    }
    
+   public void getProd(RaceProdVo RaceProdVo) throws SQLException {
+	   raceProdDaoImpl.read_count(RaceProdVo);
+	   
+	   } 
+   
+   
    @Override
    public List<RaceProdVo> selectAll() throws SQLException {
    
