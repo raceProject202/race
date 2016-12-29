@@ -49,4 +49,7 @@ public class RaceQnaServiceImpl implements RaceService<RaceQnaVo, Integer>{
 	public List<RaceQnaVo> search(String title) throws SQLException {
 		return raceQnaDaoImpl.search(title); 
 	}
+	public RaceQnaVo selectId(String key) throws SQLException {
+		return raceQnaDaoImpl.selectId(key);
+	}
 }
