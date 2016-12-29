@@ -55,5 +55,10 @@ public class RaceQnaDaoImpl implements RaceDao<RaceQnaVo, Integer>{
 
 			
 	}
+	
+	public RaceQnaVo selectId(String key) throws SQLException {
+		RaceQnaVo raceQnaVo = (RaceQnaVo)client.queryForObject("selectId", key);
+		return raceQnaVo;
+	} 
 
 }

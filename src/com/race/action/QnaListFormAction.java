@@ -27,9 +27,8 @@ public class QnaListFormAction implements RaceAction {
 
 		RaceQnaServiceImpl raceQnaService = RaceQnaServiceImpl.getInstance();
 		List<RaceQnaVo> listQna = null;
-		if (raceMember == null) {
-			url = "/qna/qna_fail.jsp"; // alert창을 보여주기 위해서 썻음
-		} else {
+		
+		
 			try {
 				listQna = raceQnaService.selectAll();
 			} catch (SQLException e) {
@@ -38,7 +37,7 @@ public class QnaListFormAction implements RaceAction {
 			}
 			System.out.println(listQna.get(1) + "가나다라마바사");
 			request.setAttribute("listQna", listQna);
-		}
+	
 		return url;
 	}
 
