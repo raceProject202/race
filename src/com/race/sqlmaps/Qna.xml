@@ -25,6 +25,10 @@
 		select * from qna where qna_qseq=#qna_qseq#
 	</select>
 	
+	<select id="selectId" resultClass="qna">
+		select * from qna where qna_id=#qna_id#
+	</select>
+	
 	<!-- 질문 등록 -->
 	<update id="insertQna" parameterClass="qna">
 		insert into qna(qna_qseq,qna_title,qna_content,qna_reply,qna_id,qna_rep,qna_date)
