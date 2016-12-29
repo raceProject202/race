@@ -16,9 +16,9 @@
 		}
 		alert(str);
 		if (str == null) {
-			alert("주문처리할 항목을 선택해 주세요.");
+			alert("배송처리할 항목을 선택해 주세요.");
 		} else {
-			document.frm.action = "adminOrder.do";
+			document.frm.action = "adminGo0Order.do";
 			document.frm.submit();
 		}
 	}
@@ -77,7 +77,7 @@ td, th {
 							</tr>
 							<c:forEach items="${raceCartList}" var="cart">
 								<c:choose>
-									<c:when test='${cart.cart_ok == "y" && cart.cart_go == 0 && cart.cart_last == "n"}'>
+									<c:when test='${cart.cart_ok == "y" && cart.cart_go == 1  && cart.cart_last == "n"}'>
 										<tr>
 											<td>${cart.cart_prod}</td>
 											<td>${cart.cart_name}</td>
@@ -94,7 +94,7 @@ td, th {
 								</c:choose>
 							</c:forEach>
 						</table>
-						<input type="button" value="주문처리" onClick="orders()">
+						<input type="button" value="배송처리완료" onClick="orders()">
 					</form>
 				</div>
 			</div>
