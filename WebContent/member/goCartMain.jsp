@@ -16,6 +16,20 @@
 <meta name="author" content="">
 
 <title>Shop Homepage - Start Bootstrap Template</title>
+<script type="text/javascript">
+	function back(cart_no) {
+		var theForm = document.frm;
+		theForm.cart_no.value = cart_no;
+		theForm.action = "cartDetail.do";
+		theForm.submit();
+	}
+	function back(cart_no) {
+		var theForm = document.frm;
+		theForm.cart_no.value = cart_no;
+		theForm.action = "cartBack.do";
+		theForm.submit();
+	}
+</script>
 <style>
 tr:nth-of-type(odd) {
 	background: #eee;
@@ -40,6 +54,9 @@ td, th {
 </head>
 
 <body>
+	<form name="frm" method="post">
+		<input type="hidden" name="cart_no">
+	</form>
 	<!-- Page Content -->
 	<div class="container" style="margin-top: 130px;">
 		<div class="row">
@@ -72,7 +89,7 @@ td, th {
 								<c:choose>
 									<c:when test='${cart.cart_ok eq "y"}'>
 										<tr>
-											<td>${cart.cart_date}</td>
+											<td><a href="#" onclick="detail('cart.cart_no')">${cart.cart_date}</a></td>
 											<td>${cart.prod_name}</td>
 											<td>${cart.prod_price}</td>
 											<td>${cart.cart_qty}</td>
@@ -85,9 +102,10 @@ td, th {
 														value="${cart.cart_no}"> 미처리
 						   			 	</c:when>
 												<c:when test='${cart.cart_go == 1}'>
-													<td><a href="https://service.epost.go.kr/iservice/usr/trace/usrtrc001k01.jsp">배송중(배송조회)</a></td>
+													<td><a
+														href="https://service.epost.go.kr/iservice/usr/trace/usrtrc001k01.jsp">배송중(배송조회)</a></td>
 													<td><button onclick="">확인</button>
-														<button onclick="">취소</button></td>
+														<button onclick="back('cart.cart_no')">취소</button></td>
 												</c:when>
 												<c:when test='${cart.cart_go == -1}'>
 													<td>반품중</td>

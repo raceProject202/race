@@ -148,14 +148,6 @@
 					src="img/<%=str1 %>-8<%=str2 %>" alt="">
 				</a>
 			</div>
-			<div class="col-sm-3 col-xs-6">
-				<a href="#"
-					onClick="window.open('img/electric/alton7.png', 'width=614,height=620, status=no, toolbar=no, location=no, directories=no, menubar=no, scrollbars=yes, resizable=no');">
-					<img class="img-responsive portfolio-item"
-					src="img/electric/alton7.png" alt="">
-				</a>
-			</div>
-
 		</div>
 		<!-- /.row -->
 
