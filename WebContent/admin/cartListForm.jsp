@@ -1,27 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ page trimDirectiveWhitespaces="true" %>
+	pageEncoding="UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <html>
 <head>
 <script type="text/javascript">
-function orders() {
-	var str = null; 
-	for(var i=0 ; i<document.frm.result.length ; i++){	//체크된것만 넣는다
-		if(document.frm.result[i].checked == true){
-			str += document.frm.result[i].value+"\n";
+	function orders() {
+		var str = null;
+		for (var i = 0; i < document.frm.result.length; i++) { //체크된것만 넣는다
+			if (document.frm.result[i].checked == true) {
+				str += document.frm.result[i].value + "\n";
+			}
+		}
+		alert(str);
+		if (str == null) {
+			alert("주문처리할 항목을 선택해 주세요.");
+		} else {
+			document.frm.action = "adminOrder.do";
+			document.frm.submit();
 		}
 	}
-	alert(str);
-	if (str == null) {
-      alert("주문처리할 항목을 선택해 주세요.");
-    } else {
-      document.frm.action = "adminOrder.do";
-      document.frm.submit();
-    }
-}
 </script>
 <style>
 #mains {
@@ -67,26 +67,22 @@ td, th {
 					<th>처리여부</th>
 				</tr>
 				<c:forEach items="${raceCartList}" var="cart">
-					<tr>
-						<td>${cart.cart_prod}</td>
-						<td>${cart.cart_name}</td>
-						<td>${cart.cart_zip}</td>
-						<td>${cart.cart_date}</td>
-						<td>${cart.cart_add1}</td>
-						<td>${cart.cart_add2}</td>
-						<td>${cart.cart_hp}</td>
-						<td>${cart.cart_date}</td>
-						<td>
-						<c:choose>
-						    <c:when test='${cart.cart_ok=="n"}'>
-						    	<input type="checkbox" name="result" value="${cart.cart_no}"> 미처리
-						    </c:when>
-						    <c:otherwise>
-						    	처리완료
-						   	</c:otherwise>
-						</c:choose>
-						</td>
-					</tr>
+					<c:choose>
+						<c:when test='${cart.cart_ok=="n"}'>
+							<tr>
+								<td>${cart.cart_prod}</td>
+								<td>${cart.cart_name}</td>
+								<td>${cart.cart_zip}</td>
+								<td>${cart.cart_date}</td>
+								<td>${cart.cart_add1}</td>
+								<td>${cart.cart_add2}</td>
+								<td>${cart.cart_hp}</td>
+								<td>${cart.cart_date}</td>
+								<td><input type="checkbox" name="result"
+									value="${cart.cart_no}"> 미처리</td>
+							</tr>
+						</c:when>
+					</c:choose>
 				</c:forEach>
 			</table>
 			<input type="button" value="주문처리" onClick="orders()">

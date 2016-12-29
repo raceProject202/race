@@ -18,22 +18,22 @@
 		theForm.action = "productForm.do";
 		theForm.submit();
 	}
-	function go_rep(qseq) {
+	function productMtb(lgu) {
 		var theForm = document.ff;
 		theForm.lgu.value = "2";
-		theForm.action = "productMtb.do";
+		theForm.action = "productForm.do";
 		theForm.submit();
 	}
-	function go_rep(qseq) {
+	function productFixi(lgu) {
 		var theForm = document.ff;
 		theForm.lgu.value = "3";
-		theForm.action = "productFixi.do";
+		theForm.action = "productForm.do";
 		theForm.submit();
 	}
-	function go_rep(qseq) {
+	function productElectric(lgu) {
 		var theForm = document.ff;
 		theForm.lgu.value = "4";
-		theForm.action = "productElectric.do";
+		theForm.action = "productForm.do";
 		theForm.submit();
 	}
 </script>
@@ -154,9 +154,9 @@ nav#aaaa a:hover{
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#" onClick="productHybrid()">하이브리드</a></li>
-						<li><a href="productMtb.do" >MTB</a></li>
-						<li><a href="productFixi.do">픽시</a></li>
-						<li><a href="productElectric.do">전기바이크</a></li>
+						<li><a href="#" onClick="productMtb()" >MTB</a></li>
+						<li><a href="#" onClick="productFixi()">픽시</a></li>
+						<li><a href="#" onClick="productElectric()">전기바이크</a></li>
 				</ul>
 			</div>
 		</div>

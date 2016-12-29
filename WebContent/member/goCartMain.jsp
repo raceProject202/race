@@ -68,35 +68,39 @@ td, th {
 								<th>주문상태</th>
 								<th>확인/취소</th>
 							</tr>
-							<c:forEach items="${raceCartList}" var="cart">
-								<tr>
-									<td>${cart.cart_date}</td>
-									<td>${cart.prod_name}</td>
-									<td>${cart.cart_zip}</td>
-									<td>${cart.prod_price}</td>
-									<td>${cart.prod_qty}</td>
-									<td>무료</td>
-									<td>${cart.cart_go}</td>
-									<c:choose>
-										<c:when test='${cart.cart_go == 0}'>
-											<td>준비중</td>
-											<td><button onclick="">확인</button><button onclick="">취소</button></td>
-											<input type="checkbox" name="result" value="${cart.cart_no}"> 미처리
+							<c:forEach items="${cartProdList}" var="cart">
+								<c:choose>
+									<c:when test='${cart.cart_ok eq "y"}'>
+										<tr>
+											<td>${cart.cart_date}</td>
+											<td>${cart.prod_name}</td>
+											<td>${cart.prod_price}</td>
+											<td>${cart.cart_qty}</td>
+											<td>무료</td>
+											<c:choose>
+												<c:when test='${cart.cart_go == 0}'>
+													<td>준비중</td>
+													<td><button onclick="">취소</button></td>
+													<input type="checkbox" name="result"
+														value="${cart.cart_no}"> 미처리
 						   			 	</c:when>
-						   			 	<c:when test='${cart.cart_go == 1}'>
-											<td>배송중</td>
-											<td></td>
-						   			 	</c:when>
-						   			 	<c:when test='${cart.cart_go == -1}'>
-											<td>반품중</td>
-											<td></td>
-						   			 	</c:when>
-										<c:otherwise>
-						    				<td>처리 완료</td>
-											<td></td>
-						   				</c:otherwise>
-									</c:choose>
-								</tr>
+												<c:when test='${cart.cart_go == 1}'>
+													<td><a href="https://service.epost.go.kr/iservice/usr/trace/usrtrc001k01.jsp">배송중(배송조회)</a></td>
+													<td><button onclick="">확인</button>
+														<button onclick="">취소</button></td>
+												</c:when>
+												<c:when test='${cart.cart_go == -1}'>
+													<td>반품중</td>
+													<td></td>
+												</c:when>
+												<c:otherwise>
+													<td>처리 완료</td>
+													<td></td>
+												</c:otherwise>
+											</c:choose>
+										</tr>
+									</c:when>
+								</c:choose>
 							</c:forEach>
 						</table>
 					</form>
