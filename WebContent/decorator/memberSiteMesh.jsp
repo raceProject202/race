@@ -48,9 +48,6 @@
 <link href="css/joinCss.css" rel="stylesheet">   
 
 <style>
-#foot{margin-top:-1.9em;height:1.9em}
-
-
 nav#aaaa a:hover{
    font-size:15pt;
 }
@@ -169,7 +166,7 @@ nav#aaaa a:hover{
    <!-- /.container -->
    </nav>
    <decorator:body />
-<div id="foot">
+
    <footer>
       <div class="row" id="ft" style="height:150px;">
          <hr>
@@ -185,7 +182,7 @@ nav#aaaa a:hover{
          </div>
       </div>
    </footer>
-</div>
+
    <!-- jQuery -->
    <script src="js/jquery.js"></script>
 
