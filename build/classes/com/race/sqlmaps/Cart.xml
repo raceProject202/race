@@ -63,10 +63,31 @@ VALUES
 		where cart_no=#cart_no#
 	</update>
 	
-	<!-- 장바구니 내용 수정 -->
+	<!-- 장바구니 내용 수정1 -->
 	<update id="updateCartOk" parameterClass="int">
 		update cart 
 		set cart_ok='y'
+		where cart_no=#cart_no#
+	</update>
+	
+	<!-- 장바구니 내용 수정2 -->
+	<update id="updateCartGo1" parameterClass="int">
+		update cart 
+		set cart_go= 1
+		where cart_no=#cart_no#
+	</update>
+	
+	<!-- 장바구니 내용 수정3 -->
+	<update id="updateCartGo2" parameterClass="int">
+		update cart 
+		set cart_go= -1
+		where cart_no=#cart_no#
+	</update>
+	
+	<!-- 장바구니 내용 수정4 -->
+	<update id="updateCartLast" parameterClass="int">
+		update cart 
+		set cart_last= 'y'
 		where cart_no=#cart_no#
 	</update>
 	

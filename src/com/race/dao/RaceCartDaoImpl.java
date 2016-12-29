@@ -48,9 +48,21 @@ public class RaceCartDaoImpl implements RaceDao<RaceCartVo, Integer>{
 	public void update(RaceCartVo vo) throws SQLException {
 		client.update("updateCart", vo);
 	}
-	
+	//상품 주문
 	public void updateOk(int key) throws SQLException {
 		client.update("updateCartOk", key);
+	}
+	//상품 배송처리
+	public void updateGo1(int key) throws SQLException {
+		client.update("updateCartGo2", key);
+	}
+	//상품 반품처리
+	public void updateGo2(int key) throws SQLException {
+		client.update("updateCartGo2", key);
+	}
+	//상품 끝
+	public void updateLast(int key) throws SQLException {
+		client.update("updateCartLast", key);
 	}
 
 	@Override

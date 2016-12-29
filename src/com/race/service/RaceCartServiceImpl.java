@@ -42,9 +42,21 @@ public class RaceCartServiceImpl implements RaceService<RaceCartVo, Integer>{
 	public void update(RaceCartVo vo) throws SQLException {
 		raceCartDaoImpl.update(vo);
 	}
-	
+	//상품 주문
 	public void updateOk(int key) throws SQLException {
 		raceCartDaoImpl.updateOk(key);
+	}
+	//배송퍼리
+	public void updateGo1(int key) throws SQLException {
+		raceCartDaoImpl.updateGo1(key);
+	}
+	//반품처리
+	public void updateGo2(int key) throws SQLException {
+		raceCartDaoImpl.updateGo2(key);
+	}
+	//상품 끝
+	public void updateLast(int key) throws SQLException {
+		raceCartDaoImpl.updateLast(key);
 	}
 
 	@Override

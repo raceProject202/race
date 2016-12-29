@@ -18,7 +18,7 @@
 		if (str == null) {
 			alert("주문처리할 항목을 선택해 주세요.");
 		} else {
-			document.frm.action = "adminOrder.do";
+			document.frm.action = "adminGoM1Order.do";
 			document.frm.submit();
 		}
 	}
@@ -77,7 +77,7 @@ td, th {
 							</tr>
 							<c:forEach items="${raceCartList}" var="cart">
 								<c:choose>
-									<c:when test='${cart.cart_ok == "y" && cart.cart_go == 0 && cart.cart_last == "n"}'>
+									<c:when test='${cart.cart_ok == "y" && cart.cart_go == -1  && cart.cart_last == "n"}'>
 										<tr>
 											<td>${cart.cart_prod}</td>
 											<td>${cart.cart_name}</td>
