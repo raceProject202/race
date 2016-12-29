@@ -106,7 +106,7 @@ td, th {
                   </td>
                </tr>
             </c:forEach>
-            <tr><td colspan="6" style="text-align: center;"> ${paging} </td></tr>
+            <tr><td colspan="7" style="text-align: center;"> ${paging} </td></tr>
             </c:otherwise>	
 </c:choose>  
          </table>
