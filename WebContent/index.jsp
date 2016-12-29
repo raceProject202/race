@@ -29,12 +29,17 @@
 	}
 </script>
 </head>
+<style>
+	#jj{
+		padding:500px;
+	}
+</style>
 <body>
 	<form name="frm" method="post">
       	<input type="hidden" name="lgu">
 	</form>
-	<header id="myCarousel" class="carousel slide">
-		<!-- Indicators -->
+	
+<div id="myCarousel" class="carousel slide">
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			<li data-target="#myCarousel" data-slide-to="1"></li>
@@ -58,18 +63,17 @@
 				<div class="carousel-caption">
 				</div>
 			</div>
-		</div>
-
+		</div>	
+	
+	<!-- Page Content -->
+	<div class="container">
 		<!-- Controls -->
 		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
 			<span class="icon-prev"></span>
 		</a> <a class="right carousel-control" href="#myCarousel"
 			data-slide="next"> <span class="icon-next"></span>
 		</a>
-
-	</header>
-	<!-- Page Content -->
-	<div class="container">
+		<div id ="jj">
 		<!-- Portfolio Section -->
 		<div class="row">
 			<div class="col-lg-12">
@@ -95,11 +99,13 @@
 			</div>
 		</div>
 		<!-- /.row -->
-
+		</div>
+</div>
 		<a href="#" onClick="go_view()" class="btn btn-defalut" role="button">VIEW
 			COLLECTION</a>
 
-	</div>
+	
+</div>	
 	<%
 		CookieBox cookieBox = new CookieBox(request);	
 		if(!cookieBox.exists("POPUP1")){	

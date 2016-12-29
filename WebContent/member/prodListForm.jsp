@@ -38,7 +38,7 @@
         <div class="row">
 
             <div class="col-md-3"><!-- <br><br><br><br><br><br> -->
-                <p class="lead">하이브리드</p>
+                <p class="lead">BIKE</p>
                 <div class="list-group">
                     <a href="productHybrid.do" class="list-group-item">하이브리드</a>
                     <a href="productMtb.do" class="list-group-item">MTB</a>

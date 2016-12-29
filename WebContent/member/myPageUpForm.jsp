@@ -21,6 +21,9 @@
 			  window.open( url, "_blank_1",
 			"toolbar=no, menubar=no, scrollbars=yes, resizable=no, width=550, height=500, top=300, left=300, ");
 	}
+	function upDate_cancle(form){
+		location.href="<%=request.getContextPath()%>/myPageUp.do";
+	}
 </script>
 	
 	
@@ -31,7 +34,7 @@
 	<form class="form-horizontal" action="myPageUpForm.do" method="post" name="updateForm">
 		<fieldset>
 			<!-- Text input-->
-			<div class="form-group" style="margin-top: 130px;">
+			<div class="form-group" style="margin-top: 130px;" >
 
 				<label class="col-md-4 control-label" for="id">ID</label>
 				<div class="col-md-1">
@@ -116,7 +119,7 @@
 			<div class="form-group" style="padding-top:50px;">
 				<label class="col-md-5 control-label" for="cancle"></label>
 				<div class="col-md-5">
-					<button id="button" name="cancle" class="btn btn-primary">취소</button>
+					<button id="button" name="cancle" class="btn btn-primary" onclick="upDate_cancle(this.form)">취소</button>
 					<label class="col-md-5 control-label" for="submit"></label>
 					<div class="col-md-2">
 						<button id="submit" name="submit" class="btn btn-primary">수정</button>
