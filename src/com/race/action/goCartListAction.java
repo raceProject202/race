@@ -42,7 +42,7 @@ public class goCartListAction implements RaceAction{
 //		System.out.println("아이디 : "+loginUser.getMem_id());
 		try {
 			cartList = raceCartService.listCart(loginUser.getMem_id());
-			System.out.println("카트 : "+cartList);
+//			System.out.println("카트 : "+cartList);
 			for(RaceCartVo x : cartList){
 				RaceProdVo prodVo = raceProdService.selectVo(x.getCart_prod());
 				System.out.println("출력문들 : "+x+prodVo);
