@@ -49,6 +49,7 @@ public class goCartListAction implements RaceAction{
 				RaceCartProdDto cartProdDto = new RaceCartProdDto(x, prodVo);
 				System.out.println("출력분2 : "+cartProdDto);
 				cartDtoList.add(cartProdDto);
+				System.out.println("ok : "+cartProdDto.getCart_ok());
 			}
 			
 			

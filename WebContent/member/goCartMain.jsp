@@ -68,14 +68,14 @@ td, th {
 								<th>주문상태</th>
 								<th>확인/취소</th>
 							</tr>
-							<c:choose>
-								<c:when test='${cartProdList.cart_ok eq "y"}'>
-									<c:forEach items="${cartProdList}" var="cart">
+							<c:forEach items="${cartProdList}" var="cart">
+								<c:choose>
+									<c:when test='${cart.cart_ok eq "y"}'>
 										<tr>
 											<td>${cart.cart_date}</td>
 											<td>${cart.prod_name}</td>
 											<td>${cart.prod_price}</td>
-											<td>${cart.prod_qty}</td>
+											<td>${cart.cart_qty}</td>
 											<td>무료</td>
 											<c:choose>
 												<c:when test='${cart.cart_go == 0}'>
@@ -85,7 +85,7 @@ td, th {
 														value="${cart.cart_no}"> 미처리
 						   			 	</c:when>
 												<c:when test='${cart.cart_go == 1}'>
-													<td>배송중</td>
+													<td><a href="https://service.epost.go.kr/iservice/usr/trace/usrtrc001k01.jsp">배송중(배송조회)</a></td>
 													<td><button onclick="">확인</button>
 														<button onclick="">취소</button></td>
 												</c:when>
@@ -99,13 +99,9 @@ td, th {
 												</c:otherwise>
 											</c:choose>
 										</tr>
-									</c:forEach>
-									<c:otherwise>
-										<td colspan="7">주문상품이 없습니다</td>
-										
-									</c:otherwise>
-								</c:when>
-							</c:choose>
+									</c:when>
+								</c:choose>
+							</c:forEach>
 						</table>
 					</form>
 				</div>
