@@ -19,8 +19,8 @@ public class RaceProdServiceImpl implements RaceService<RaceProdVo, Integer>{
       return instance;
    }
    
-   public int getProd(RaceProdVo RaceProdVo) throws SQLException {
-	   return raceProdDaoImpl.read_count(RaceProdVo);
+   public int getProd(int prod_id) throws SQLException {
+	   return raceProdDaoImpl.read_count(prod_id);
 	   } 
    
    

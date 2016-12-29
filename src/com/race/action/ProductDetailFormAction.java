@@ -30,6 +30,7 @@ public class ProductDetailFormAction implements RaceAction{
 		try {
 			raceProdVo = raceProdService.selectVo(Integer.parseInt(prid_id));
 			raceLprodVo = raceLprodService.selectVo(prid_lgu);
+			raceProdService.getProd(Integer.parseInt(prid_id));
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {

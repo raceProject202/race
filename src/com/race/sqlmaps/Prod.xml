@@ -10,7 +10,7 @@
 	<typeAlias alias="prodVo" type="com.race.dto.RaceProdVo" />
 
 	<update id="readcountProd" parameterClass="int">
-		update prod set read_count = #read_count#+1
+		update prod set read_count = (select read_count from prod where prod_id=#prod_id#)+1
 		where prod_id=#prod_id#
 	</update>
 

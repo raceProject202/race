@@ -20,7 +20,7 @@ public class PopupServlet extends HttpServlet {
 		if(request.getParameter("one_day")!=null && request.getParameter("one_day").equals("check")){
 			CookieBox cookieBox = new CookieBox(request);		
 			if(!cookieBox.exists("POPUP1"))
-				response.addCookie(CookieBox.createCookie("POPUP1", "one_day", "/", 10));					
+				response.addCookie(CookieBox.createCookie("POPUP1", "one_day", "/",10));					
 		}
 		
 		response.sendRedirect("index.jsp");

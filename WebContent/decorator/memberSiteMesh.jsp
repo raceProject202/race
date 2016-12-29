@@ -73,6 +73,7 @@ nav#aaaa a:hover{
 	width: 100%;
 	text-align: center;
 	height: 50%;
+	font-size:20px;
 }
 #race2{
  	width:95%;

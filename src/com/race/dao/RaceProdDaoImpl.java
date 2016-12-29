@@ -26,8 +26,8 @@ public class RaceProdDaoImpl implements RaceDao<RaceProdVo, Integer> {
       this.client = client;
    }
    
-   public int read_count(RaceProdVo RaceProdVo) throws SQLException{
-	     return client.update("readcountProd",RaceProdVo);
+   public int read_count(int prod_id) throws SQLException{
+	     return client.update("readcountProd",prod_id);
 	   }
 	   
    
