@@ -2,6 +2,7 @@ package com.race.action;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -32,20 +33,21 @@ public class goCartListAction implements RaceAction{
 		} 
 		
 		RaceMemberVo loginUser = (RaceMemberVo) session.getAttribute("loginUser");
-		
+//		System.out.println("로그인 아이디 : "+loginUser);
 		List<RaceCartVo> cartList = null;
-		List<RaceCartProdDto> cartDtoList = null;
+		List<RaceCartProdDto> cartDtoList = new ArrayList<>();
 		
 		RaceCartServiceImpl raceCartService = RaceCartServiceImpl.getInstance();
 		RaceProdServiceImpl raceProdService = RaceProdServiceImpl.getInstance();
-		
+//		System.out.println("아이디 : "+loginUser.getMem_id());
 		try {
 			cartList = raceCartService.listCart(loginUser.getMem_id());
+			System.out.println("카트 : "+cartList);
 			for(RaceCartVo x : cartList){
 				RaceProdVo prodVo = raceProdService.selectVo(x.getCart_prod());
-				
+				System.out.println("출력문들 : "+x+prodVo);
 				RaceCartProdDto cartProdDto = new RaceCartProdDto(x, prodVo);
-				
+				System.out.println("출력분2 : "+cartProdDto);
 				cartDtoList.add(cartProdDto);
 			}
 			
