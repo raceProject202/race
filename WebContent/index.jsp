@@ -19,9 +19,20 @@
 <meta name="author" content="">
 
 <title>Modern Business - Start Bootstrap Template</title>
+<script type="text/javascript">
+ 
+	function go_view() {
+		var theForm = document.frm;
+		theForm.lgu.value = "1";
+		theForm.action = "productForm.do";
+		theForm.submit();
+	}
+</script>
 </head>
 <body>
-
+	<form name="frm" method="post">
+      	<input type="hidden" name="lgu">
+	</form>
 	<header id="myCarousel" class="carousel slide">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
@@ -85,7 +96,7 @@
 		</div>
 		<!-- /.row -->
 
-		<a href="productHybrid.do" class="btn btn-defalut" role="button">VIEW
+		<a href="#" onClick="go_view()" class="btn btn-defalut" role="button">VIEW
 			COLLECTION</a>
 
 	</div>
