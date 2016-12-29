@@ -19,6 +19,7 @@
 		select * from qna order by qna_qseq desc
 	</select>
 	
+
 	<!-- 질문 하나 보기 -->
 	<select id="selectQna" resultClass="qna">
 		select * from qna where qna_qseq=#qna_qseq#

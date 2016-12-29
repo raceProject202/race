@@ -9,7 +9,7 @@
 	<typeAlias alias="int" type="java.lang.Integer" />
 	<typeAlias alias="prodVo" type="com.race.dto.RaceProdVo" />
 
-	<update id="readcountQna" parameterClass="qna">
+	<update id="readcountProd" parameterClass="int">
 		update prod set read_count = #read_count#+1
 		where prod_id=#prod_id#
 	</update>

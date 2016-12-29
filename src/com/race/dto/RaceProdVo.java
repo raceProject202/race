@@ -11,7 +11,16 @@ public class RaceProdVo {
 	private String prod_image1;//상품 이미지1
 	private String prod_image2;//상품 이미지2
 	private String prod_lgu;   //상품 등록코드
+	private int read_count;
 	
+	
+	
+	public int getRead_count() {
+		return read_count;
+	}
+	public void setRead_count(int read_count) {
+		this.read_count = read_count;
+	}
 	public int getProd_id() {
 		return prod_id;
 	}

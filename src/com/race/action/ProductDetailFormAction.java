@@ -12,7 +12,7 @@ import com.race.dto.RaceProdVo;
 import com.race.service.RaceLprodServiceImpl;
 import com.race.service.RaceProdServiceImpl;
 
-public class productDetailFormAction implements RaceAction{
+public class ProductDetailFormAction implements RaceAction{
 
 	@Override
 	public String execute(HttpServletRequest request,
@@ -21,7 +21,7 @@ public class productDetailFormAction implements RaceAction{
 		RaceProdServiceImpl raceProdService = RaceProdServiceImpl.getInstance();
 		RaceLprodServiceImpl raceLprodService = RaceLprodServiceImpl.getInstance();
 		
-		String url = "/member/ProdDetailForm.jsp";
+		String url = "member/ProdDetailForm.jsp";
 		String prid_id = request.getParameter("prod_id");
 		String prid_lgu = request.getParameter("prod_lgu");
 
@@ -37,6 +37,7 @@ public class productDetailFormAction implements RaceAction{
 		}
 		
 		request.setAttribute("ProdVo", raceProdVo);
+		System.out.println(raceProdVo+"######################");
 		request.setAttribute("LprodVo", raceLprodVo);
 		
 		return url;

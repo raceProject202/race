@@ -94,7 +94,7 @@
                                 <p>${ProdVo.prod_cn}</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">review</p>
+                                <p class="pull-right">${ProdVo.read_count }&nbsp;&nbsp;review</p>
                                 <p>
                                     <span class="glyphicon glyphicon-star"></span>
                                     <span class="glyphicon glyphicon-star"></span>
