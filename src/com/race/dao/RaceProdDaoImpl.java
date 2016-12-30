@@ -13,7 +13,7 @@ public class RaceProdDaoImpl implements RaceDao<RaceProdVo, Integer> {
    private SqlMapClient client = IBatisDBConnector.getSqlMapInstance();
    private static RaceProdDaoImpl instance = new RaceProdDaoImpl();
 	static int view_rows = 5; 	// 페이지의 개수
-	static int counts = 5; 		// 한 페이지에 나타낼 상품의 개수
+	static int counts = 10; 		// 한 페이지에 나타낼 상품의 개수
 	
    private RaceProdDaoImpl(){
    }

@@ -17,14 +17,14 @@
 
 <title>Shop Homepage - Start Bootstrap Template</title>
 <script type="text/javascript">
-	function back(cart_no) {
-		var theForm = document.frm;
+	function detail(cart_no) {
+		var theForm = document.frms;
 		theForm.cart_no.value = cart_no;
 		theForm.action = "cartDetail.do";
 		theForm.submit();
 	}
 	function back(cart_no) {
-		var theForm = document.frm;
+		var theForm = document.frms;
 		theForm.cart_no.value = cart_no;
 		theForm.action = "cartBack.do";
 		theForm.submit();
@@ -54,7 +54,7 @@ td, th {
 </head>
 
 <body>
-	<form name="frm" method="post">
+	<form name="frms" method="post">
 		<input type="hidden" name="cart_no">
 	</form>
 	<!-- Page Content -->
@@ -89,7 +89,7 @@ td, th {
 								<c:choose>
 									<c:when test='${cart.cart_ok eq "y"}'>
 										<tr>
-											<td><a href="#" onclick="detail('cart.cart_no')">${cart.cart_date}</a></td>
+											<td><a href="#" onclick="detail('${cart.cart_no}')">"${cart.cart_date}"</a></td>
 											<td>${cart.prod_name}</td>
 											<td>${cart.prod_price}</td>
 											<td>${cart.cart_qty}</td>

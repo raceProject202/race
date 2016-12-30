@@ -22,7 +22,7 @@ public class CartDetailAction implements RaceAction{
 		String url = "/member/goCartDetail.jsp";
 		
 		String cart_no = request.getParameter("cart_no");
-		System.out.println("cart_no : "+cart_no);
+//		System.out.println("cart_no : "+cart_no);
 		RaceCartVo cartVo = null;
 		RaceCartProdDto cartProdDto = null;
 		
@@ -33,11 +33,13 @@ public class CartDetailAction implements RaceAction{
 			cartVo = raceCartService.selectVo(Integer.parseInt(cart_no));
 			RaceProdVo prodVo = raceProdService.selectVo(cartVo.getCart_prod());
 			cartProdDto = new RaceCartProdDto(cartVo, prodVo);
+			System.out.println(cartProdDto);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		
 		request.setAttribute("cartProdDto", cartProdDto);
+		
 		
 		return url;		
 	}

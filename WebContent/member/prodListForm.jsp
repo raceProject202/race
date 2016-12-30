@@ -18,6 +18,11 @@
     <title>Ho!!</title>
 
 <script type="text/javascript">
+function go_view(lgu) {
+	document.frm.lgu.value = lgu;
+	document.frm.action = "productForm.do";
+	document.frm.submit();
+}
 	function Detail(prod_id,prod_lgu) {
 		document.frm.prod_id.value = prod_id;
 		document.frm.prod_lgu.value = prod_lgu;
@@ -32,6 +37,7 @@
 <form name="frm" method="post">
 <input type="hidden" name="prod_id">
 <input type="hidden" name="prod_lgu">
+<input type="hidden" name="lgu">
     <!-- Page Content -->
     <div class="container" style="margin-top: 130px;">
 
@@ -40,10 +46,10 @@
             <div class="col-md-3"><!-- <br><br><br><br><br><br> -->
                 <p class="lead">하이브리드</p>
                 <div class="list-group">
-                    <a href="productHybrid.do" class="list-group-item">하이브리드</a>
-                    <a href="productMtb.do" class="list-group-item">MTB</a>
-                    <a href="productFixi.do" class="list-group-item">픽시</a>
-                    <a href="productElectric.do" class="list-group-item">전기자전거</a>
+                    <a href="#" onclick="go_view('1')" class="list-group-item">하이브리드</a>
+                    <a href="#" onclick="go_view('2')" class="list-group-item">MTB</a>
+                    <a href="#" onclick="go_view('3')" class="list-group-item">픽시</a>
+                    <a href="#" onclick="go_view('4')" class="list-group-item">전기자전거</a>
                 </div>
             </div>
 		

@@ -13,6 +13,17 @@
 		select * from member where mem_id=#mem_id#
 	</select>
 	
+	<!-- 페이비만들기 -->
+	<select id="totalMemberCount" parameterClass="str" resultClass="int">
+		select count(*) from member where mem_name like '%$mem_name$%'
+	</select>
+	
+	<!-- 페이비만들기 출력 -->
+	<select id="selectAllMemberPage" parameterClass="str" resultClass="member">
+		select * from member where mem_name like '%$mem_name$%' order by
+		mem_id desc
+	</select>
+	
 	<!-- 회원 전체 리스트 -->
 	<select id="selectAllMember" resultClass="member">
 		select * from member order by mem_date desc

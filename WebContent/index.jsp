@@ -75,7 +75,7 @@
 			<div class="col-lg-12">
 				<h2 class="page-header">New Items</h2>
 			</div>
-			<div class="col-md-4 col-sm-6">
+			<div class="col-md-4 col-sm-6"> 
 				<a href="productFixi.do"> <img
 					class="img-responsive img-portfolio img-hover" src="img/fixi/fixi01.jpg"
 					alt="">

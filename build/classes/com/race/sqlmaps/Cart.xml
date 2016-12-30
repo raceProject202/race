@@ -58,8 +58,7 @@ VALUES
 	<!-- 장바구니 내용 수정 -->
 	<update id="updateCart" parameterClass="cart">
 		update cart 
-		set cart_prod=#cart_prod#, cart_member=#cart_member#,
-			cart_qty=#cart_qty#, cart_date=#cart_date#
+		set cart_qty=#cart_qty#
 		where cart_no=#cart_no#
 	</update>
 	

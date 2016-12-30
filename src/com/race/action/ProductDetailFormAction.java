@@ -21,7 +21,7 @@ public class ProductDetailFormAction implements RaceAction{
 		RaceProdServiceImpl raceProdService = RaceProdServiceImpl.getInstance();
 		RaceLprodServiceImpl raceLprodService = RaceLprodServiceImpl.getInstance();
 		
-		String url = "member/ProdDetailForm.jsp";
+		String url = "/member/ProdDetailForm.jsp";
 		String prid_id = request.getParameter("prod_id");
 		String prid_lgu = request.getParameter("prod_lgu");
 
