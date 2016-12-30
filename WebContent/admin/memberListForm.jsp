@@ -6,6 +6,7 @@
 
 <html>
 <head>
+<meta charset="UTF-8">
 <script type="text/javascript">
 	function search_go(form) {
 		

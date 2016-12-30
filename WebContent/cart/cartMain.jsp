@@ -3,13 +3,31 @@
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-
+<%
+	int i=0;
+%>
 <html>
 <head>
-
+<script type="text/javascript">
+	function orders() {
+		var str = null;
+		for (var i = 0; i < document.frm.result.length; i++) { //체크된것만 넣는다
+			if (document.frm.result[i].checked == true) {
+				str += document.frm.result[i].value + "\n";
+			}
+		}
+		alert(str);
+		if (str == null) {
+			alert("주문처리할 항목을 선택해 주세요.");
+		} else {
+			document.frm.action = "cartGocart.do";
+			document.frm.submit();
+		}
+	}
+</script>
 <style>
 #mains {
-	margin: 5px 10% 5px 10%;
+	margin: 5px 20% 15% 20%;
 }
 
 tr:nth-of-type(odd) {
@@ -42,85 +60,34 @@ td, th {
 			<table id="orderList">
 				<tr>
 					<th>장바구니 번호</th>
-					<th>상품 번호</th>
-					<th>회원 이름</th>
+					<th>상품 이미지</th>
+					<th>상품 명</th>
 					<th>상품 수량</th>
-					<th>주문 날짜</th>
+					<th>상품 가격</th>
+					<th>배송비</th>
+					<th>합  계</th>
 				</tr>
-				<c:forEach items="${cartList}" var="cart">
+				<c:forEach items="${cartProdList}" var="cart">
+				<c:choose>
+					<c:when test='${cart.cart_ok eq "n"}'>
 					<tr>
-						<td>${cart.cart_no}</td>
+						<td><input type="checkbox" name="result"
+												value="${cart.cart_no}"><%= ++i %></td>
 						<td>
-							<c:choose>
-								<c:when test="${cart.cart_prod == '1'}">
-									<a href="productHybridDetail1.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '2'}">
-									<a href="productHybridDetail2.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '3'}">
-									<a href="productHybridDetail3.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '4'}">
-									<a href="productHybridDetail4.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '5'}">
-									<a href="productHybridDetail5.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '6'}">
-									<a href="productMtbDetail1.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '7'}">
-									<a href="productMtbDetail2.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '8'}">
-									<a href="productMtbDetail3.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '9'}">
-									<a href="productMtbDetail4.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '10'}">
-									<a href="productMtbDetail5.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '11'}">
-									<a href="productFixiDetail1.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '12'}">
-									<a href="productFixiDetail2.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '13'}">
-									<a href="productFixiDetail3.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '14'}">
-									<a href="productFixiDetail4.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '15'}">
-									<a href="productFixiDetail5.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '16'}">
-									<a href="productElectricDetail1.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '17'}">
-									<a href="productElectricDetail2.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '18'}">
-									<a href="productElectricDetail3.do">${cart.cart_prod}</a>
-								</c:when>								
-								<c:when test="${cart.cart_prod == '19'}">
-									<a href="productElectricDetail4.do">${cart.cart_prod}</a>
-								</c:when>
-								<c:when test="${cart.cart_prod == '20'}">
-									<a href="productElectricDetail5.do">${cart.cart_prod}</a>
-								</c:when>
-								
-							</c:choose>
-						</td>
-						<td>${cart.cart_member}</td>
+						<img src="img/${cart.prod_image1}" style="width: 200px; height:100px"></td>
+						<td>${cart.prod_name}</td>
 						<td>${cart.cart_qty}</td>
-						<td>${cart.cart_date}</td>
+						<td>${cart.prod_price}</td>
+						<td>무료</td>
+						<td>${cart.cart_qty * cart.prod_price}</td>
 					</tr>
+					</c:when>
+					<c:otherwise>
+					</c:otherwise>
+				</c:choose>
 				</c:forEach>
 			</table>
+				<input type="button" value="주문처리" onClick="orders()">
 		
 		</form>
 	</div>

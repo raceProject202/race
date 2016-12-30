@@ -30,6 +30,7 @@ public class ProductDetailFormAction implements RaceAction{
 		try {
 			raceProdVo = raceProdService.selectVo(Integer.parseInt(prid_id));
 			raceLprodVo = raceLprodService.selectVo(prid_lgu);
+			System.out.println("raceLprodVo : "+raceLprodVo);
 			raceProdService.getProd(Integer.parseInt(prid_id));
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
@@ -38,7 +39,7 @@ public class ProductDetailFormAction implements RaceAction{
 		}
 		
 		request.setAttribute("ProdVo", raceProdVo);
-		System.out.println(raceProdVo+"######################");
+//		System.out.println(raceProdVo+"######################");
 		request.setAttribute("LprodVo", raceLprodVo);
 		
 		return url;

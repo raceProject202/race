@@ -73,7 +73,7 @@ table {
 					<td colspan="2">이미지</td>
 					<th>상 품 명 :</th>
 					<td><input type="text" class="form-control" id="prod_name"
-						name="prod_name" value="${cartProdDto.prod_name }"></td>
+						name="prod_name" readonly value="${cartProdDto.prod_name }"></td>
 				</tr>
 				<tr>
 					<td colspan="2" rowspan="7"><img
@@ -81,7 +81,7 @@ table {
 						style="width: 400px; height: 250px"></td>
 					<th>가 격 :</th>
 					<td><input type="text" class="form-control" id="prod_price"
-						name="prod_price" value="${cartProdDto.prod_price }"></td>
+						name="prod_price" readonly value="${cartProdDto.prod_price }"></td>
 				</tr>
 				<tr>
 					<th>개 수 :</th>
@@ -92,7 +92,7 @@ table {
 					<th>합 계 :</th>
 					<td><input type="text" class="form-control" id="qty"
 						name="qty"
-						value="${cartProdDto.prod_price * cartProdDto.cart_qty}"></td>
+						readonly value="${cartProdDto.prod_price * cartProdDto.cart_qty}"></td>
 				</tr>
 				<tr>
 					<th>주 소1 :</th>
@@ -107,7 +107,7 @@ table {
 				<tr>
 					<th></th>
 					<td><input type="submit" onclick="update(this)" value="수정">
-					<button onclick="home()">홈으로</button></td>
+					<a href="goCartListAction.do"><button >홈으로</button></a></td>
 				</tr>
 
 			</table>

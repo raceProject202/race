@@ -6,6 +6,7 @@
 
 <html>
 <head>
+<meta charset="UTF-8">
 <script type="text/javascript">
    function goProdName() {
       document.frm.action = "Prodsearch.do";
@@ -67,8 +68,8 @@ td, th {
             <tr>
                <td id="tdid"> 상품 이름 : <input type="text" name="key"> <input
                   class="btn btn-default" type="button" value="name" onclick="goProdName()">
+                  <button class="btn btn-default" onclick="insertProd()">상품등록</button>
                </td>
-               <td><button onclick="insertProd()">상품등록</button></td>
                
             </tr>
          </table>
