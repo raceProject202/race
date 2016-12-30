@@ -16,6 +16,7 @@ public class RaceUpZipNumAction implements RaceAction{
 	@Override
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		
 		String url = "member/myPageZipNum.jsp";
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
@@ -26,7 +27,7 @@ public class RaceUpZipNumAction implements RaceAction{
 			//AddressDAO addressDAO = AddressDAO_JDBC.getInstance();
 			RaceZipTbServiceImpl raceZimNum = RaceZipTbServiceImpl.getInstance();
 			try {
-				ArrayList<RaceZipTbVo> raceZip = (ArrayList<RaceZipTbVo>) raceZimNum.selectAll();
+				ArrayList<RaceZipTbVo> raceZip = (ArrayList<RaceZipTbVo>) raceZimNum.selectNameAll(dong);
 				request.setAttribute("raceZip", raceZip);
 			} catch (SQLException e) {
 				e.printStackTrace();

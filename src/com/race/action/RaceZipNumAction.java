@@ -25,7 +25,7 @@ public class RaceZipNumAction implements RaceAction{
 			//AddressDAO addressDAO = AddressDAO_JDBC.getInstance();
 			RaceZipTbServiceImpl raceZimNum = RaceZipTbServiceImpl.getInstance();
 			try {
-				ArrayList<RaceZipTbVo> raceZip = (ArrayList<RaceZipTbVo>) raceZimNum.selectAll();
+				ArrayList<RaceZipTbVo> raceZip = (ArrayList<RaceZipTbVo>) raceZimNum.selectNameAll(dong);
 				request.setAttribute("raceZip", raceZip);
 			} catch (SQLException e) {
 				e.printStackTrace();

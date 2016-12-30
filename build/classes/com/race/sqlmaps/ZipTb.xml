@@ -16,7 +16,7 @@
 	
 	<!-- 읍,면,동을 통해 주소 출력 -->
 	<select id="selectNameZipTb" resultClass="ziptb">
-		select * from ziptb where dong like '%$dong$%'
+		select * from ziptb where dong like '%'||#dong#||'%' 
 	</select>
 	
 </sqlMap>
