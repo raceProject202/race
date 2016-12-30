@@ -15,6 +15,7 @@ public class memberTest {
 		System.out.println("eeee");
 		RaceMemberServiceImpl dao = RaceMemberServiceImpl.getInstance();
 		RaceMemberVo vo = new RaceMemberVo();
+		RaceMemberVo vos = new RaceMemberVo();
 		
 		vo.setMem_id("b");
 		vo.setMem_pass("a");
