@@ -28,13 +28,25 @@
 <meta name="author" content="">
 
 <title>Portfolio Item - Start Bootstrap Template</title>
-
+<script type="text/javascript">
+	function cart() {
+		var cart_qty = document.frm.cart_qty.value;
+		if(cart_qty == 0 || cart_qty.equals("0")){
+			alert("구매하싱 상품의 개수를 정해주세요.")
+		}else{
+		alert("상품을 장바구니에 담았습니다.")
+		document.frm.action = "cartStart.do";
+		document.frm.submit();
+		}
+	}
+	
+</script>
 </head>
 
 <body>
 
-
-
+<form name="frm" method="post">
+<input type="hidden" name="prod_id" value="${ ProdVo.prod_id }">
 	<!-- Page Content -->
 	<div class="container">
 		<br>
@@ -56,31 +68,29 @@
 			</div>
 
 			<div class="col-md-4">
-				<h3>Project Description</h3>
+				<h3>${ ProdVo.prod_name }</h3>
 				<p>${ ProdVo.prod_cn }</p>
 				<h3>Project Details</h3>
 				<ul>
-					<li>Lorem Ipsum</li>
+					<li>배송비 무료</li>
 					<li>Dolor Sit Amet</li>
 					<li>Consectetur</li>
 					<li>Adipiscing Elit</li>
 				</ul>
 			</div>
 			<label> 가 격 : </label> <span>${ProdVo.prod_price} 원</span> <label>
-				수 량 : </label> <input type="text" name="quantity" size="2"
-				value="${ ProdVo.prod_qty }"><br>
+				수 량 : </label> <input type="text" name="cart_qty" size="2"
+				value="0"><br>
 			<br>
 			<div id="buttons">
-				<a class="btn icon-btn btn-success" href="#"> <span
+				<a class="btn icon-btn btn-success" href="#" onclick="cart()"> <span
 					class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>
 					장바구니에 담기
-				</a> <a class="btn icon-btn btn-info" href="#"> <span
+				</a> <a class="btn icon-btn btn-info" href="#" > <span
 					class="glyphicon btn-glyphicon glyphicon-share img-circle text-info"></span>
 					바로구매
 				</a>
-
 			</div>
-
 		</div>
 		<!-- /.row -->
 
@@ -102,14 +112,14 @@
 				<a href="#"
 					onClick="window.open('img/<%=str1 %>-2<%=str2 %>', 'width=614,height=620, status=no, toolbar=no, location=no, directories=no, menubar=no, scrollbars=yes, resizable=no');">
 					<img class="img-responsive portfolio-item"
-					src="img/<%=str1 %>-2<%=str2 %>" alt="">
+					src="img/<%=str1 %>-2<%=str2 %>" alt="" style="width: 320px; height:190px">
 				</a>
 			</div>
 			<div class="col-sm-3 col-xs-6">
 				<a href="#"
 					onClick="window.open('img/<%=str1 %>-3<%=str2 %>', 'width=614,height=620, status=no, toolbar=no, location=no, directories=no, menubar=no, scrollbars=yes, resizable=no');">
 					<img class="img-responsive portfolio-item"
-					src="img/<%=str1 %>-3<%=str2 %>" alt="">
+					src="img/<%=str1 %>-3<%=str2 %>" alt="" style="width: 320px; height:190px">
 				</a>
 			</div>
 			
@@ -117,42 +127,42 @@
 				<a href="#"
 					onClick="window.open('img/<%=str1 %>-4<%=str2 %>', 'width=614,height=620, status=no, toolbar=no, location=no, directories=no, menubar=no, scrollbars=yes, resizable=no');">
 					<img class="img-responsive portfolio-item"
-					src="img/<%=str1 %>-4<%=str2 %>" alt="">
+					src="img/<%=str1 %>-4<%=str2 %>" alt="" style="width: 320px; height:190px">
 				</a>
 			</div>
 			<div class="col-sm-3 col-xs-6">
 				<a href="#"
 					onClick="window.open('img/<%=str1 %>-5<%=str2 %>', 'width=614,height=620, status=no, toolbar=no, location=no, directories=no, menubar=no, scrollbars=yes, resizable=no');">
 					<img class="img-responsive portfolio-item"
-					src="img/<%=str1 %>-5<%=str2 %>" alt="">
+					src="img/<%=str1 %>-5<%=str2 %>" alt="" style="width: 320px; height:190px">
 				</a>
 			</div>
 			<div class="col-sm-3 col-xs-6">
 				<a href="#"
 					onClick="window.open('img/<%=str1 %>-6<%=str2 %>', 'width=614,height=620, status=no, toolbar=no, location=no, directories=no, menubar=no, scrollbars=yes, resizable=no');">
 					<img class="img-responsive portfolio-item"
-					src="img/<%=str1 %>-6<%=str2 %>" alt="">
+					src="img/<%=str1 %>-6<%=str2 %>" alt="" style="width: 320px; height:190px">
 				</a>
 			</div>
 			<div class="col-sm-3 col-xs-6">
 				<a href="#"
 					onClick="window.open('img/<%=str1 %>-7<%=str2 %>', 'width=614,height=620, status=no, toolbar=no, location=no, directories=no, menubar=no, scrollbars=yes, resizable=no');">
 					<img class="img-responsive portfolio-item"
-					src="img/<%=str1 %>-7<%=str2 %>" alt="">
+					src="img/<%=str1 %>-7<%=str2 %>" alt="" style="width: 320px; height:190px">
 				</a>
 			</div>
 			<div class="col-sm-3 col-xs-6">
 				<a href="#"
 					onClick="window.open('img/<%=str1 %>-8<%=str2 %>', 'width=614,height=620, status=no, toolbar=no, location=no, directories=no, menubar=no, scrollbars=yes, resizable=no');">
 					<img class="img-responsive portfolio-item"
-					src="img/<%=str1 %>-8<%=str2 %>" alt="">
+					src="img/<%=str1 %>-8<%=str2 %>" alt="" style="width: 320px; height:190px">
 				</a>
 			</div>
 		</div>
 		<!-- /.row -->
 
-
 	</div>
+</form>
 	<!-- /.container -->
 
 	<!-- jQuery -->

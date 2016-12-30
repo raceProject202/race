@@ -69,7 +69,7 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="ProdStart.do">상품리스트</a></li>
-					<li><a href="adminStart.do">회원리스트</a></li>
+					<li><a href="MemberAll.do">회원리스트</a></li>
 					<li><a href="cartListAll.do">주문리스트</a></li>
 					<li><a href="QnaStart.do">QnA리스트</a></li>
 				</ul>

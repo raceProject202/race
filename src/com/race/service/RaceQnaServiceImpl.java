@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.race.dao.RaceMemberDaoImpl;
 import com.race.dao.RaceQnaDaoImpl;
+import com.race.dto.RaceMemberVo;
 import com.race.dto.RaceQnaVo;
 
 public class RaceQnaServiceImpl implements RaceService<RaceQnaVo, Integer>{
@@ -23,6 +24,21 @@ public class RaceQnaServiceImpl implements RaceService<RaceQnaVo, Integer>{
 	public List<RaceQnaVo> selectAll() throws SQLException {
 		return raceQnaDaoImpl.selectAll();
 	}
+	
+	// 페이지
+		public List<RaceQnaVo> selectAllPage(int page, String qna_title)
+				throws SQLException {
+
+			return raceQnaDaoImpl.selectAllPage(page, qna_title);
+		}
+
+		// 페이지
+		public String pageNumber(int page, String key) throws SQLException {
+			String paging;
+			paging = raceQnaDaoImpl.pageNumber(page, key);
+			return paging;
+
+		}
 
 	@Override
 	public RaceQnaVo selectVo(Integer key) throws SQLException {
@@ -48,8 +64,5 @@ public class RaceQnaServiceImpl implements RaceService<RaceQnaVo, Integer>{
 	}
 	public List<RaceQnaVo> search(String title) throws SQLException {
 		return raceQnaDaoImpl.search(title); 
-	}
-	public RaceQnaVo selectId(String key) throws SQLException {
-		return raceQnaDaoImpl.selectId(key);
 	}
 }
