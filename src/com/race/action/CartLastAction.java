@@ -13,7 +13,7 @@ import com.race.dto.RaceProdVo;
 import com.race.service.RaceCartServiceImpl;
 import com.race.service.RaceProdServiceImpl;
 
-public class CartBackAction implements RaceAction{
+public class CartLastAction implements RaceAction{
 
 	@Override
 	public String execute(HttpServletRequest request,
@@ -34,7 +34,7 @@ public class CartBackAction implements RaceAction{
 //			cartVo = raceCartService.selectVo(Integer.parseInt(cart_no));
 //			RaceProdVo prodVo = raceProdService.selectVo(cartVo.getCart_prod());
 //			cartProdDto = new RaceCartProdDto(cartVo, prodVo);
-			raceCartService.updateGo2(Integer.parseInt(cart_no));
+			raceCartService.updateLast(Integer.parseInt(cart_no));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

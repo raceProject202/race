@@ -18,15 +18,21 @@
 <title>Shop Homepage - Start Bootstrap Template</title>
 <script type="text/javascript">
 	function detail(cart_no) {
-		var theForm = document.frms;
+		var theForm = document.frm;
 		theForm.cart_no.value = cart_no;
 		theForm.action = "cartDetail.do";
 		theForm.submit();
 	}
 	function back(cart_no) {
-		var theForm = document.frms;
+		var theForm = document.frm;
 		theForm.cart_no.value = cart_no;
 		theForm.action = "cartBack.do";
+		theForm.submit();
+	}
+	function lastOk(cart_no) {
+		var theForm = document.frm;
+		theForm.cart_no.value = cart_no;
+		theForm.action = "cartLast.do";
 		theForm.submit();
 	}
 </script>
@@ -54,9 +60,6 @@ td, th {
 </head>
 
 <body>
-	<form name="frms" method="post">
-		<input type="hidden" name="cart_no">
-	</form>
 	<!-- Page Content -->
 	<div class="container" style="margin-top: 130px;">
 		<div class="row">
@@ -72,8 +75,9 @@ td, th {
 			<div class="col-md-9">
 				<!-- <br><br><br><br><br><br> -->
 				<div id="mains">
-					<h1>장바구니</h1>
+					<h1>구매내역</h1>
 					<form name="frm" method="post">
+					<input type="hidden" name="cart_no">
 						<br>
 						<table id="orderList">
 							<tr>
@@ -97,24 +101,35 @@ td, th {
 											<c:choose>
 												<c:when test='${cart.cart_go == 0}'>
 													<td>준비중</td>
-													<td><button onclick="">취소</button></td>
-													<input type="checkbox" name="result"
-														value="${cart.cart_no}"> 미처리
-						   			 	</c:when>
+													<td><button onclick="back('${cart.cart_no}')">취소</button></td>
+						   			 			</c:when>
 												<c:when test='${cart.cart_go == 1}'>
-													<td><a
-														href="https://service.epost.go.kr/iservice/usr/trace/usrtrc001k01.jsp">배송중(배송조회)</a></td>
-													<td><button onclick="">확인</button>
-														<button onclick="back('cart.cart_no')">취소</button></td>
+													<c:choose>
+														<c:when test='${cart.cart_last eq "n"}'>
+															<td><a
+																href="https://service.epost.go.kr/iservice/usr/trace/usrtrc001k01.jsp">배송중(배송조회)</a></td>
+															<td><button onclick="lastOk('${cart.cart_no}');">확인</button>
+																<button onclick="back('${cart.cart_no}');">취소</button></td>
+								   			 			</c:when>
+														<c:otherwise>
+															<td>처리 완료</td>
+															<td></td>
+														</c:otherwise>
+													</c:choose>
 												</c:when>
 												<c:when test='${cart.cart_go == -1}'>
-													<td>반품중</td>
-													<td></td>
+												
+													<c:choose>
+														<c:when test='${cart.cart_last eq "n"}'>
+															<td>반품중</td>
+															<td></td>
+								   			 			</c:when>
+														<c:otherwise>
+															<td>반품 완료</td>
+															<td></td>
+														</c:otherwise>
+													</c:choose>
 												</c:when>
-												<c:otherwise>
-													<td>처리 완료</td>
-													<td></td>
-												</c:otherwise>
 											</c:choose>
 										</tr>
 									</c:when>

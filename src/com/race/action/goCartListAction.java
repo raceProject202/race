@@ -45,11 +45,11 @@ public class goCartListAction implements RaceAction{
 //			System.out.println("카트 : "+cartList);
 			for(RaceCartVo x : cartList){
 				RaceProdVo prodVo = raceProdService.selectVo(x.getCart_prod());
-				System.out.println("출력문들 : "+x+prodVo);
+//				System.out.println("출력문들 : "+x+prodVo);
 				RaceCartProdDto cartProdDto = new RaceCartProdDto(x, prodVo);
-				System.out.println("출력분2 : "+cartProdDto);
+//				System.out.println("출력분2 : "+cartProdDto);
 				cartDtoList.add(cartProdDto);
-				System.out.println("ok : "+cartProdDto.getCart_ok());
+//				System.out.println("ok : "+cartProdDto.getCart_ok());
 			}
 			
 			
