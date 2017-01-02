@@ -11,10 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.race.dto.RaceCartDto;
+import com.race.dto.RaceCartProdDto;
 import com.race.dto.RaceCartVo;
 import com.race.dto.RaceMemberVo;
+import com.race.dto.RaceProdVo;
 import com.race.service.RaceCartServiceImpl;
 import com.race.service.RaceMemberServiceImpl;
+import com.race.service.RaceProdServiceImpl;
 
 public class CartListAction implements RaceAction{
 
@@ -31,20 +34,24 @@ public class CartListAction implements RaceAction{
 		} 
 		
 		RaceMemberVo loginUser = (RaceMemberVo) session.getAttribute("loginUser");
-		
 		List<RaceCartVo> cartList = null;
+		List<RaceCartProdDto> cartDtoList = new ArrayList<>();
 		
 		RaceCartServiceImpl raceCartService = RaceCartServiceImpl.getInstance();
-		RaceMemberServiceImpl raceMemberService = RaceMemberServiceImpl.getInstance();
-		
+		RaceProdServiceImpl raceProdService = RaceProdServiceImpl.getInstance();
 		try {
 			cartList = raceCartService.listCart(loginUser.getMem_id());
+			for(RaceCartVo x : cartList){
+				RaceProdVo prodVo = raceProdService.selectVo(x.getCart_prod());
+				RaceCartProdDto cartProdDto = new RaceCartProdDto(x, prodVo);
+				cartDtoList.add(cartProdDto);
+			}
 			
-			request.setAttribute("cartList", cartList);
+			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		request.setAttribute("cartProdList", cartDtoList);
 		
 		return url;		
 	}

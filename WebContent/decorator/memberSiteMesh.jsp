@@ -81,6 +81,7 @@ nav#aaaa a:hover{
    margin-left:100px;
 }
 
+
 </style>
 <decorator:head />
 </head>
@@ -165,8 +166,9 @@ nav#aaaa a:hover{
    </div>
    <!-- /.container -->
    </nav>
+   
    <decorator:body />
-
+<div id = "foot">
    <footer>
       <div class="row" id="ft" style="height:150px;">
          <hr>
@@ -182,7 +184,7 @@ nav#aaaa a:hover{
          </div>
       </div>
    </footer>
-
+</div>
    <!-- jQuery -->
    <script src="js/jquery.js"></script>
 

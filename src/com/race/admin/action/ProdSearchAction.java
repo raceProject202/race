@@ -22,12 +22,14 @@ public class ProdSearchAction implements Action{
          HttpServletResponse response) throws ServletException, IOException {
       RaceProdServiceImpl raceProdService = RaceProdServiceImpl.getInstance();
       String url = "prodListForm.jsp";
-      
+      request.setCharacterEncoding("utf-8");
+      response.setContentType("text/html;charset=utf-8");
       String key=request.getParameter("key");
+      System.out.println("key : "+key);
       String tpage=request.getParameter("tpage");
       if(key==null){
           key="";
-         }    
+      }    
          if(tpage== null){
            tpage="1"; //현재 페이지 (default 1)                        
          }else if(tpage.equals("")){
@@ -40,6 +42,7 @@ public class ProdSearchAction implements Action{
       String paging=null;
       try {
          list = raceProdService.selectAllPage(Integer.parseInt(tpage), key);
+         System.out.println("list : "+list);
          paging = raceProdService.pageNumber(Integer.parseInt(tpage), key);
       } catch (SQLException e) {
          e.printStackTrace();

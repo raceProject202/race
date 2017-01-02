@@ -13,33 +13,33 @@ import com.race.dto.RaceProdVo;
 import com.race.service.RaceCartServiceImpl;
 import com.race.service.RaceProdServiceImpl;
 
-public class CartDetailAction implements RaceAction{
+public class CartLastAction implements RaceAction{
 
 	@Override
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		
-		String url = "/member/goCartDetail.jsp";
+		String url = "goCartListAction.do";
+		
 		
 		String cart_no = request.getParameter("cart_no");
-//		System.out.println("cart_no : "+cart_no);
-		RaceCartVo cartVo = null;
-		RaceCartProdDto cartProdDto = null;
-		
+		System.out.println("cart_no : "+cart_no);
+//		RaceCartVo cartVo = null;
+//		RaceCartProdDto cartProdDto = null;
+//		
 		RaceCartServiceImpl raceCartService = RaceCartServiceImpl.getInstance();
-		RaceProdServiceImpl raceProdService = RaceProdServiceImpl.getInstance();
-		
+//		RaceProdServiceImpl raceProdService = RaceProdServiceImpl.getInstance();
+//		
 		try {
-			cartVo = raceCartService.selectVo(Integer.parseInt(cart_no));
-			RaceProdVo prodVo = raceProdService.selectVo(cartVo.getCart_prod());
-			cartProdDto = new RaceCartProdDto(cartVo, prodVo);
-			System.out.println(cartProdDto);
+//			cartVo = raceCartService.selectVo(Integer.parseInt(cart_no));
+//			RaceProdVo prodVo = raceProdService.selectVo(cartVo.getCart_prod());
+//			cartProdDto = new RaceCartProdDto(cartVo, prodVo);
+			raceCartService.updateLast(Integer.parseInt(cart_no));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		request.setAttribute("cartProdDto", cartProdDto);
-		
+//		
+//		request.setAttribute("cartProdDto", cartProdDto);
 		
 		return url;		
 	}

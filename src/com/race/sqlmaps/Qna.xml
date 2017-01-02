@@ -9,10 +9,21 @@
 	<typeAlias alias="int" type="java.lang.Integer" />
 	<typeAlias alias="qna" type="com.race.dto.RaceQnaVo" />
 	
+	<!-- 페이비만들기 -->
+	<select id="totalQnaCount" parameterClass="str" resultClass="int">
+		select count(*) from qna where qna_title like '%$qna_title$%'
+	</select>
+	
+	<!-- 페이비만들기 출력 -->
+	<select id="selectAllQnaPage" parameterClass="str" resultClass="qna">
+		select * from qna where qna_title like '%$qna_title$%' order by	qna_qseq desc
+	</select>
+	
 	<!-- 상품검색 -->
 	 <select id="title" resultClass="qna">
       select * from qna where qna_title like '%$qna_title$%'
    	</select>
+	
 	
 	<!-- 전체 질문 보기 -->
 	<select id="selectAllQna" resultClass="qna">
@@ -23,10 +34,6 @@
 	<!-- 질문 하나 보기 -->
 	<select id="selectQna" resultClass="qna">
 		select * from qna where qna_qseq=#qna_qseq#
-	</select>
-	
-	<select id="selectId" resultClass="qna">
-		select * from qna where qna_id=#qna_id#
 	</select>
 	
 	<!-- 질문 등록 -->
