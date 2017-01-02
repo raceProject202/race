@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+    "http://www.ibatis.com/dtd/sql-map-2.dtd">
+    
+<sqlMap namespace="Lprod">
+	<!-- 상품 분류 -->
+	<typeAlias alias="str" type="java.lang.String" />
+	<typeAlias alias="int" type="java.lang.Integer" />
+	<typeAlias alias="lprod" type="com.race.dto.RaceLprodVo" />
+	
+	<!-- 상품 분류 전체 보기 -->
+	<select id="selectAllLprod" resultClass="lprod">
+		select * from lprod order by lprod_gu
+	</select>
+	
+</sqlMap>
