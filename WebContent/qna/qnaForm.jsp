@@ -11,9 +11,10 @@
 		document.frm.action = "searchQna.do";
 		document.frm.submit();
 	}
-	function go_view(qseq) {
+	function go_view(qseq,id) {
 		var theForm = document.frm;
 		theForm.qseq.value = qseq;
+		theForm.id.value = id;
 		theForm.action = "memberQnaDetail.do";
 		theForm.submit();
 	}
@@ -68,6 +69,7 @@ td, th {
 			</tr>
 		</table>
 		<input type="hidden" name="qseq">
+		<input type="hidden" name="id">
 		<table id="orderList">
 			<tr>
 				<th>작성자아이디</th>
@@ -80,7 +82,7 @@ td, th {
 				<tr>
 					<td>${QnaVo.qna_id}</td>
 					<td><a href="#"
-						onClick="javascript:go_view('${QnaVo.qna_qseq}')">
+						onClick="javascript:go_view('${QnaVo.qna_qseq}','${QnaVo.qna_id}')">
 							${QnaVo.qna_title} </a></td>
 					<td>${QnaVo.qna_reply}</td>
 					<td>${QnaVo.qna_date}</td>
