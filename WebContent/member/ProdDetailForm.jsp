@@ -30,14 +30,10 @@
 <title>Portfolio Item - Start Bootstrap Template</title>
 <script type="text/javascript">
 	function cart() {
-		var cart_qty = document.frm.cart_qty.value;
-		if(cart_qty == 0 || cart_qty.equals("0")){
-			alert("구매하싱 상품의 개수를 정해주세요.")
-		}else{
+		
 		alert("상품을 장바구니에 담았습니다.")
 		document.frm.action = "cartStart.do";
 		document.frm.submit();
-		}
 	}
 	
 </script>
