@@ -131,6 +131,7 @@
 					<label class="col-md-5 control-label" for="submit"></label>
 					<div class="col-md-2">
 						<button id="button" name="button" class="btn btn-primary" onclick="upDate_ok(this.form)">수정</button>
+
 					</div>
 				</div>
 			</div>

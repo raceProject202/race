@@ -30,7 +30,7 @@ public class ProdUpdateAction implements Action{
 		HttpSession session=request.getSession();
 		ServletContext context=session.getServletContext();
 		String uploadFilePath=context.getRealPath(savePath);
-		System.out.println("aaaaaaaaaaaaaaaaa");
+//		System.out.println("aaaaaaaaaaaaaaaaa");
 		MultipartRequest multi=new MultipartRequest(request, // 1. 요청객체
 				savePath, // 2. 업로드될 파일이 저장될 물리적 경로
 				sizeLimit, //3 업로드될 파일 크기
@@ -38,17 +38,23 @@ public class ProdUpdateAction implements Action{
 				new DefaultFileRenamePolicy() // 5. 중복파일 이름 정책
 				);
 
-		String a = multi.getParameter("prod_id");
-		String b = request.getParameter("prod_id");
-		
-		System.out.println("a : "+a+" , b : "+b);
+		String images = multi.getFilesystemName("imgName");
+		if(images == null || images.equals("")){
+			try {
+				images = raceProdService.selectVo(Integer.parseInt(multi.getParameter("prod_id"))).getProd_image1();
+			} catch (NumberFormatException | SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+			
 		raceProdVo.setProd_id(Integer.parseInt(multi.getParameter("prod_id")));
 		raceProdVo.setProd_name(multi.getParameter("prod_name"));
 		raceProdVo.setProd_cn(multi.getParameter("prod_cn"));
 		raceProdVo.setProd_cost(Integer.parseInt(multi.getParameter("prod_cost")));
 		raceProdVo.setProd_price(Integer.parseInt(multi.getParameter("prod_price")));
 		raceProdVo.setProd_qty(Integer.parseInt(multi.getParameter("prod_qty")));
-		raceProdVo.setProd_image1(multi.getFilesystemName("imgName"));
+		raceProdVo.setProd_image1(images);
 		raceProdVo.setProd_lgu(multi.getParameter("prod_lgu"));
 		System.out.println(raceProdVo);
 		try {

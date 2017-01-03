@@ -12,7 +12,7 @@ import com.race.dto.RaceCartVo;
 import com.race.dto.RaceMemberVo;
 import com.race.service.RaceCartServiceImpl;
 
-public class cartStartAction implements RaceAction{
+public class cartGoStartAction implements RaceAction{
 
 	@Override
 	public String execute(HttpServletRequest request,
@@ -37,7 +37,7 @@ public class cartStartAction implements RaceAction{
 //		System.out.println("cart_qty : "+cart_qty);
 		cartVo.setCart_prod(Integer.parseInt(cart_prod));
 		cartVo.setCart_qty(Integer.parseInt(cart_qty));
-		cartVo.setCart_ok("n");
+		cartVo.setCart_ok("y");
 		cartVo.setCart_member(loginUser.getMem_id());
 		
 //		System.out.println("cartVo : "+cartVo);

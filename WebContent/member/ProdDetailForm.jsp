@@ -35,6 +35,12 @@
 		document.frm.action = "cartStart.do";
 		document.frm.submit();
 	}
+	function cartGoCart() {
+		
+		alert("aaaaa")
+		document.frm.action = "cartGoStart.do";
+		document.frm.submit();
+	}
 	
 </script>
 </head>
@@ -82,7 +88,7 @@
 				<a class="btn icon-btn btn-success" href="#" onclick="cart()"> <span
 					class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>
 					장바구니에 담기
-				</a> <a class="btn icon-btn btn-info" href="#" > <span
+				</a> <a class="btn icon-btn btn-info" href="#" onclick="cartGoCart()"> <span
 					class="glyphicon btn-glyphicon glyphicon-share img-circle text-info"></span>
 					바로구매
 				</a>
