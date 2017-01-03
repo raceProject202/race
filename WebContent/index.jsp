@@ -44,17 +44,17 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
          <div class="item active">
-            <div class="fill" style="background-image: url('img/electric/carMain.png');"></div>
+            <div class="fill" style="background-image: url('img/${ProdList.get(0).prod_image1}');"></div>
             <div class="carousel-caption">
             </div>
          </div>
          <div class="item">
-            <div class="fill" style="background-image: url('img/fixi/carMain.jpg');"></div>
+            <div class="fill" style="background-image: url('img/${ProdList.get(1).prod_image1}');"></div>
             <div class="carousel-caption">
             </div>
          </div>
          <div class="item">
-            <div class="fill" style="background-image: url('img/hybrid/carMain.PNG');"></div>
+            <div class="fill" style="background-image: url('img/${ProdList.get(2).prod_image1}');"></div>
             <div class="carousel-caption">
             </div>
          </div>
@@ -77,19 +77,19 @@
          </div>
          <div class="col-md-4 col-sm-6">
             <a href="productFixi.do"> <img
-               class="img-responsive img-portfolio img-hover" src="img/fixi/fixi01.jpg"
+               class="img-responsive img-portfolio img-hover" src="img/${ProdList.get(0).prod_image1}"
                alt="">
             </a>
          </div>
          <div class="col-md-4 col-sm-6">
             <a href="productElectric.do"> <img
-               class="img-responsive img-portfolio img-hover" src="img/electric/scgMain.png"
+               class="img-responsive img-portfolio img-hover" src="img/${ProdList.get(1).prod_image1}"
                alt="">
             </a>
          </div>
          <div class="col-md-4 col-sm-6">
             <a href="productHybrid.do"> <img
-               class="img-responsive img-portfolio img-hover" src="img/hybrid/hybMain.png"
+               class="img-responsive img-portfolio img-hover" src="img/${ProdList.get(2).prod_image1}"
                alt="">
             </a>
          </div>
