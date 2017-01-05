@@ -22,22 +22,19 @@ public class MyPageUpFormAction implements RaceAction{
 		HttpSession session = request.getSession();
 		RaceMemberVo raceMember = (RaceMemberVo) session.getAttribute("loginUser");
 		
-		 request.setAttribute("upList", raceMember);
 		 
-		 
-		 
-/*//       System.out.println("id : "+mem_id);
+//       System.out.println("id : "+mem_id);
        RaceMemberServiceImpl raceMemberService = RaceMemberServiceImpl.getInstance();
        
        
        RaceMemberVo memberVo = null;
        try {
-          memberVo = raceMemberService.selectVo(mem_id);
+          memberVo = raceMemberService.selectVo(raceMember.getMem_id());
           System.out.println(memberVo);
       } catch (SQLException e) {
          e.printStackTrace();
       }
-       request.setAttribute("memberVo", memberVo);*/
+       request.setAttribute("upList", memberVo);
 		return url;
 	}
 

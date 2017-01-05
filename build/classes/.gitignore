@@ -1,11 +1,3 @@
 /com/
+/test/
 /src/
-/action/
-/admin/
-/controller/
-/dao/
-/dto/
-/properties/
-/service/
-/sqlconfig/
-/sqlmaps/

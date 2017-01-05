@@ -16,10 +16,10 @@ public class MyPageUpAction implements RaceAction{
 	@Override
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-
+		System.out.println("MyPageUpAction");
 		request.setCharacterEncoding("UTF-8");
 		
-		String url = "myPageForm.do";
+		String url = "/member/myPageForm.jsp";
 		
 		HttpSession session = request.getSession();
 		
@@ -32,9 +32,9 @@ public class MyPageUpAction implements RaceAction{
 		raceMemberVo.setMem_add2(request.getParameter("add2"));
 		raceMemberVo.setMem_email(request.getParameter("email"));
 		raceMemberVo.setMem_hp(request.getParameter("phone"));
-		raceMemberVo.setMem_zip(request.getParameter("zip"));
+		raceMemberVo.setMem_zip(request.getParameter("zipcode"));
 		
-		System.out.println("2132132132132");
+		System.out.println("2132132132132+++++++++++++++");
 		System.out.println(raceMemberVo);
 		System.out.println("2132132132132");
 		
