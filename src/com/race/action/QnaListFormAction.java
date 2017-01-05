@@ -45,7 +45,7 @@ public class QnaListFormAction implements RaceAction {
 		try {
 			listQna = raceQnaService
 					.selectAllPage(Integer.parseInt(tpage), key);
-			paging = raceQnaService.pageNumber(Integer.parseInt(tpage), key);
+			paging = raceQnaService.pageNumber2(Integer.parseInt(tpage), key);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
