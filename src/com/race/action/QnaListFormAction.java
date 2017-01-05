@@ -18,7 +18,7 @@ public class QnaListFormAction implements RaceAction {
 	@Override
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-
+		
 		String url = "/qna/qnaForm.jsp";
 
 		HttpSession session = request.getSession();

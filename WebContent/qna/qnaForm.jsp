@@ -54,9 +54,13 @@ td, th {
 	border-collapse: collapse;
 	text-align: center;
 }
+h1{
+	margin-left:80px;
+}
 </style>
 </head>
 <article>
+<br><br><br>
 	<h1>QnA리스트</h1>
 	<form name="frm" method="post" id="mains">
 		<table style="float: right;">
