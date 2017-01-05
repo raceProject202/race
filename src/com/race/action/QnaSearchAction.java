@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import com.race.dto.RaceQnaVo;
 import com.race.service.RaceQnaServiceImpl;
 
-public class QnaSearchAction implements RaceAction{
+public class QnaSearchAction implements RaceAction {
 
 	@Override
 	public String execute(HttpServletRequest request,
@@ -55,5 +55,5 @@ public class QnaSearchAction implements RaceAction{
 		      
 		      return url;
 	}
-	}
 
+}
