@@ -11,7 +11,7 @@
 		document.frm.action = "searchQna.do";
 		document.frm.submit();
 	}
-	function go_view(qseq,id) {
+	function go_view(qseq, id) {
 		var theForm = document.frm;
 		theForm.qseq.value = qseq;
 		theForm.id.value = id;
@@ -72,8 +72,8 @@ h1{
 					role="button">글쓰기</a></td>
 			</tr>
 		</table>
-		<input type="hidden" name="qseq">
-		<input type="hidden" name="id">
+		<input type="hidden" name="qseq"> <input type="hidden"
+			name="id">
 		<table id="orderList">
 			<tr>
 				<th>작성자아이디</th>
@@ -82,21 +82,30 @@ h1{
 				<th>질문날짜</th>
 				<th>기본키(답변여부)</th>
 			</tr>
-			<c:forEach items="${listQna}" var="QnaVo">
-				<tr>
-					<td>${QnaVo.qna_id}</td>
-					<td><a href="#"
-						onClick="javascript:go_view('${QnaVo.qna_qseq}','${QnaVo.qna_id}')">
-							${QnaVo.qna_title} </a></td>
-					<td>${QnaVo.qna_reply}</td>
-					<td>${QnaVo.qna_date}</td>
-					<td>${QnaVo.qna_qseq}<c:choose>
-							<c:when test='${QnaVo.qna_rep=="n"}'>(미처리)</c:when>
-							<c:otherwise>(답변처리완료)</c:otherwise>
-						</c:choose>
-					</td>
-				</tr>
-			</c:forEach>
+			<c:choose>
+				<c:when test="${memberListSize<=0}">
+				</c:when>
+				<c:otherwise>
+					<c:forEach items="${listQna}" var="QnaVo">
+						<tr>
+							<td>${QnaVo.qna_id}</td>
+							<td><a href="#"
+								onClick="javascript:go_view('${QnaVo.qna_qseq}','${QnaVo.qna_id}')">
+									${QnaVo.qna_title} </a></td>
+							<td>${QnaVo.qna_reply}</td>
+							<td>${QnaVo.qna_date}</td>
+							<td>${QnaVo.qna_qseq}<c:choose>
+									<c:when test='${QnaVo.qna_rep=="n"}'>(미처리)</c:when>
+									<c:otherwise>(답변처리완료)</c:otherwise>
+								</c:choose>
+							</td>
+						</tr>
+					</c:forEach>
+					<tr>
+						<td colspan="6" style="text-align: center;">${paging}</td>
+					</tr>
+				</c:otherwise>
+			</c:choose>
 		</table>
 	</form>
 </article>
