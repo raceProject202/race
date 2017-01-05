@@ -26,19 +26,25 @@ public class RaceQnaServiceImpl implements RaceService<RaceQnaVo, Integer>{
 	}
 	
 	// 페이지
-		public List<RaceQnaVo> selectAllPage(int page, String qna_title)
-				throws SQLException {
+	public List<RaceQnaVo> selectAllPage(int page, String qna_title)
+		throws SQLException {
+		return raceQnaDaoImpl.selectAllPage(page, qna_title);
+	}
 
-			return raceQnaDaoImpl.selectAllPage(page, qna_title);
-		}
-
+	// 페이지
+	public String pageNumber(int page, String key) throws SQLException {
+		String paging;
+		paging = raceQnaDaoImpl.pageNumber(page, key);
+		return paging;
+	}
+		
 		// 페이지
-		public String pageNumber(int page, String key) throws SQLException {
-			String paging;
-			paging = raceQnaDaoImpl.pageNumber(page, key);
-			return paging;
+	public String pageNumber2(int page, String key) throws SQLException {
+		String paging;
+		paging = raceQnaDaoImpl.pageNumber2(page, key);
+		return paging;
 
-		}
+	}
 
 	@Override
 	public RaceQnaVo selectVo(Integer key) throws SQLException {

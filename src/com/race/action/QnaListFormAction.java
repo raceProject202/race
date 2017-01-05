@@ -18,27 +18,44 @@ public class QnaListFormAction implements RaceAction {
 	@Override
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		
+
+		RaceQnaServiceImpl raceQnaService = RaceQnaServiceImpl.getInstance();
 		String url = "/qna/qnaForm.jsp";
 
 		HttpSession session = request.getSession();
 		RaceMemberVo raceMember = (RaceMemberVo) session
 				.getAttribute("loginUser");
 
-		RaceQnaServiceImpl raceQnaService = RaceQnaServiceImpl.getInstance();
+		String key = request.getParameter("key");
+		String tpage = request.getParameter("tpage");
+		if (key == null) {
+			key = "";
+		}
+		if (tpage == null) {
+			tpage = "1"; // 현재 페이지 (default 1)
+		} else if (tpage.equals("")) {
+			tpage = "1";
+		}
+		request.setAttribute("key", key);
+		request.setAttribute("tpage", tpage);
+
 		List<RaceQnaVo> listQna = null;
-		
-			
-		
-			try {
-				listQna = raceQnaService.selectAll();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			System.out.println(listQna.get(1) + "가나다라마바사");
-			request.setAttribute("listQna", listQna);
-		
+		String paging = null;
+
+		try {
+			listQna = raceQnaService
+					.selectAllPage(Integer.parseInt(tpage), key);
+			paging = raceQnaService.pageNumber(Integer.parseInt(tpage), key);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(listQna.get(1) + "가나다라마바사");
+		int n=listQna.size();   
+	    request.setAttribute("qnaListSize",n); 
+	    request.setAttribute("paging", paging); 
+		request.setAttribute("listQna", listQna);
+
 		return url;
 	}
 
