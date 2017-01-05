@@ -25,7 +25,7 @@
 </script>
 <style>
 #mains {
-	margin: 5px 10% 5px 10%;
+	margin: 0px 10% 5px 10%;
 }
 
 tr:nth-of-type(odd) {
@@ -54,12 +54,15 @@ td, th {
 	border-collapse: collapse;
 	text-align: center;
 }
+
 </style>
 </head>
 <article>
-	<h1>QnA리스트</h1>
+	<br><br>
+	
 	<form name="frm" method="post" id="mains">
 		<table style="float: right;">
+		<h1>QnA리스트</h1>
 			<tr>
 				<td id="tdid"><b>제 목 : </b><input type="text" name="key">
 					<input class="btn btn-default" type="button" value="검색"

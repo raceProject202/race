@@ -34,6 +34,22 @@
 	width:100%;
 	text-align:center;
 	}
+	
+#ft {
+   width: 100%;
+   text-align: center;
+  
+   color : white;
+   height: 50%;
+   font-size:15px;
+}
+
+#foot{
+background-color:black; 
+}
+p{
+color : gray
+}
 
 </style>
 <decorator:head/>
@@ -86,15 +102,20 @@
 </div>
     <br><br><br><br>
 	<decorator:body/>
-  <footer id="foot" style="margin-bottom:100px;">  
-    <hr>
-    <div id="copy">
-  		 회사명 : xxxxxx  대표자 : 임종구 <br> E-Mail : stee90@naver.com <br>Tel : 042-222-8202 <br>Fax : 042-252-0678 사업자번호 : 306-82-05291
-		 301-805 대전광역시 중구 중앙로 76 (대흥동,영민빌딩 2층)<br><br>
-		 copyright © 대덕인재개발원. All Rights Reserved.
-    </div>         
-  </footer>
-  </div>
+  <nav class="navbar navbar-fixed-bottom"  id="foot">
+      <div class="" id="ft" style="height:30px;">
+         <div class="col-lg-12">
+            <p>
+               회사명 : RACE &nbsp;&nbsp;대표자 :기염둥이쫑구 &nbsp;&nbsp;&nbsp;&nbsp;E-Mail :
+               stee90@naver.com &nbsp;&nbsp;&nbsp;&nbsp;Tel : 042-123-4567 <br>
+               Fax : 042-123-5678&nbsp;&nbsp;&nbsp;&nbsp;사업자번호 :
+               306-82-05291&nbsp;&nbsp;&nbsp;&nbsp;301-805 대전광역시 중구 중앙로 76
+               (대흥동,영민빌딩 2층)<br>copyright © RACE.&nbsp;&nbsp; All
+               Rights Reserved.
+            </p>
+         </div>
+      </div>
+</nav>
   
   <!-- jQuery -->
 	<script src="${pageContext.request.contextPath }/js/jquery.js"></script>
